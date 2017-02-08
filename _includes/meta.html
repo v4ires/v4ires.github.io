@@ -1,0 +1,37 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+<meta name="theme-color" content="#009688">
+
+<meta name="google-site-verification" content="llBgmAkkTf5ro4stSDt013IcMjnU18FXPAfpAkO84KI" />
+
+<!-- Update your html tag to include the itemscope and itemtype attributes. -->
+<html itemscope itemtype="http://schema.org/Product">
+
+<!-- Place this data between the <head> tags of your website -->
+<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+<meta name="description" content="{% if page.description %}{{page.description}}{% else %}Meu nome é Vinícius Aires Barros, atualmente sou acadêmico do curso de Bacharel em Ciência da Computação na Universidade Federal do Tocantins (UFT - Palmas).{% endif %}" />
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}">
+<meta itemprop="description" content="{% if page.description %}{{page.description}}{% else %}Meu nome é Vinícius Aires Barros, atualmente sou acadêmico do curso de Bacharel em Ciência da Computação na Universidade Federal do Tocantins (UFT - Palmas).{% endif %}">
+<meta itemprop="image" content="{% if page.img_post %}{{ page.img_post }}{% else %}http://viniciusaires.com.br/images/logo-social.jpg{% endif %}">
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="product">
+<meta name="twitter:site" content="@publisher_handle">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}">
+<meta name="twitter:description" content="{% if page.description %}{{page.description}}{% else %}Meu nome é Vinícius Aires Barros, atualmente sou acadêmico do curso de Bacharel em Ciência da Computação na Universidade Federal do Tocantins (UFT - Palmas).{% endif %}">
+<meta name="twitter:creator" content="@vinicius_a1r3s">
+<meta name="twitter:image" content="{% if page.img_post %}{{ page.img_post }}{% else %}http://viniciusaires.com.br/images/logo-social.jpg{% endif %}">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}" />
+<meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="{% if page.type %}{{page.type}}{% else %}website{% endif %}" />
+<meta property="og:url" content="http://www.viniciusaires.com.br/{{page.slug}}" />
+<meta property="og:image" content="{% if page.img_post %}{{ page.img_post }}{% else %}http://viniciusaires.com.br/images/logo-social.jpg{% endif %}" />
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:description" content="{% if page.description %}{{page.description}}{% else %}Meu nome é Vinícius Aires Barros, atualmente sou acadêmico do curso de Bacharel em Ciência da Computação na Universidade Federal do Tocantins (UFT - Palmas).{% endif %}" />
+<meta property="og:site_name" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}" />

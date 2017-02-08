@@ -1,0 +1,17 @@
+language: ruby
+rvm:
+  - 2.2.3
+
+install:
+  - export PATH=$HOME/.local/bin:$PATH
+  - gem install jekyll
+  - gem install jekyll-sitemap
+  - gem install jekyll-paginate
+  - gem install jekyll-gist
+  - gem install redcarpet
+script:
+  - jekyll build --incremental
+
+branches:
+  only:
+    - master

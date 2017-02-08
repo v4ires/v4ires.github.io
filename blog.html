@@ -1,0 +1,46 @@
+---
+layout: blog
+---
+
+<div class="container" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
+  {% for post in site.posts %}
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="card">
+          <div class="card-image">
+            <a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ post.background }}"></a>
+          </div>
+          <div class="collection" style="margin-bottom: 0px; margin-top: 0px;">
+            <a class="collection-item" href="{{ site.baseurl }}{{ post.url }}" style="margin-bottom: 0px; margin-top: 0px;">{{ post.title }}</a>
+          </div>
+          <div class="card-action" style="padding-left: 10px; padding-right: 10px;">
+            <div class="chip" style="padding-right: 10px; padding-left: 10px;">
+              <img src="{{ site.baseurl }}/images/profile32.jpg" alt="Contact Person">
+              <a href="https://www.github.com/viniciusaires7" target="_blank" style="color: #727272; margin-right: 0px;">@VINICIUSAIRES7</a>
+            </div>
+            <div class="social-links" style="float: right;">
+              <a href="JavaScript:newPopup('https://www.facebook.com/sharer/sharer.php?u=http://viniciusaires.com.br/{{ post.slug }}/');" style="margin-right: 5px;">
+                <img src="/images/icons/facebook.png" alt="" />
+              </a>
+              <a href="JavaScript:newPopup('https://twitter.com/home?status=http://viniciusaires.com.br/{{ post.slug }}/');" style="margin-right: 5px;">
+                <img src="/images/icons/twitter.png" alt="" />
+              </a>
+              <a href="JavaScript:newPopup('https://www.linkedin.com/shareArticle?mini=true&url=http://viniciusaires.com.br/{{ post.slug }}/');" style="margin-right: 5px;">
+                <img src="/images/icons/linked-in.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn" href="{{ site.baseurl }}{{ post.url }}" style="width: 100%;">Leia mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  <a href="/">
+    <div class="chip">
+      <i class="fa fa-home"></i>
+      <caption>Back to home</caption>
+    </div>
+  </a>
+</div>
