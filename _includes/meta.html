@@ -14,7 +14,7 @@
 <!-- Schema.org markup for Google+ -->
 <meta itemprop="name" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}">
 <meta itemprop="description" content="{% if page.description %}{{page.description}}{% else %}Meu nome é Vinícius Aires Barros, atualmente sou acadêmico do curso de Bacharel em Ciência da Computação na Universidade Federal do Tocantins (UFT - Palmas).{% endif %}">
-<meta itemprop="image" content="{% if page.img_post %}{{ page.img_post }}{% else %}http://viniciusaires.com.br/images/logo-social.jpg{% endif %}">
+<meta itemprop="image" content="{% if page.img_post %}{{ page.img_post }}{% else %}http://viniciusaires.com.br{{ site.baseurl }}/assets/images/logo-social.jpg{% endif %}">
 
 <!-- Twitter Card data -->
 <meta name="twitter:card" content="product">
@@ -22,14 +22,14 @@
 <meta name="twitter:title" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}">
 <meta name="twitter:description" content="{% if page.description %}{{page.description}}{% else %}Meu nome é Vinícius Aires Barros, atualmente sou acadêmico do curso de Bacharel em Ciência da Computação na Universidade Federal do Tocantins (UFT - Palmas).{% endif %}">
 <meta name="twitter:creator" content="@vinicius_a1r3s">
-<meta name="twitter:image" content="{% if page.img_post %}{{ page.img_post }}{% else %}http://viniciusaires.com.br/images/logo-social.jpg{% endif %}">
+<meta name="twitter:image" content="{% if page.img_post %}{{ page.img_post }}{% else %}http://viniciusaires.com.br{{ site.baseurl }}/assets/images/logo-social.jpg{% endif %}">
 
 <!-- Open Graph data -->
 <meta property="og:title" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}" />
 <meta property="og:locale" content="pt_BR">
 <meta property="og:type" content="{% if page.type %}{{page.type}}{% else %}website{% endif %}" />
 <meta property="og:url" content="http://www.viniciusaires.com.br/{{page.slug}}" />
-<meta property="og:image" content="{% if page.img_post %}{{ page.img_post }}{% else %}http://viniciusaires.com.br/images/logo-social.jpg{% endif %}" />
+<meta property="og:image" content="{% if page.img_post %}{{ page.img_post }}{% else %}http://viniciusaires.com.br{{ site.baseurl }}/assets/images/logo-social.jpg{% endif %}" />
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
