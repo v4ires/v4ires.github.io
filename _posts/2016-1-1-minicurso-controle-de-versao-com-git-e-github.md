@@ -35,4 +35,4 @@ Segue abaixo os slides apresentados no minicurso, por fins didáticos e de apren
   <iframe src="http://viniciusaires.me/controle-de-versao-com-git-github-conceitos-basicos" frameborder="0" allowfullscreen></iframe>
 </div>
 
-Acessem o <a href="http://viniciusaires.com.br/minicurso-controle-de-versao-com-git-github" target="_blank">link</a> para ver a apresentação em tela cheia <i class="em em-smile"></i>
+Acessem o <a href="http://viniciusaires.me/minicurso-controle-de-versao-com-git-github" target="_blank">link</a> para ver a apresentação em tela cheia <i class="em em-smile"></i>
