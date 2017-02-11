@@ -1,12 +1,12 @@
 # Meu website pessoal [![Build Status](https://travis-ci.org/viniciusaires7/viniciusaires7.github.io.svg?branch=master)](https://travis-ci.org/viniciusaires7/viniciusaires7.github.io)
 
-<p align="center"><img src="images/website-sreenshot.png" /></p>
+<p align="center"><img src="assets//images/website-sreenshot.png" /></p>
 
 ## Como funciona?
 
 Este projeto utiliza [Jekyll](http://jekyllrb.com/), que é um gerador de páginas estáticas em Ruby.
 
-<p align="center"><img src="images/icons/jekyll.png"/></p>
+<p align="center"><img src="assets/images/icons/jekyll.png"/></p>
 
 <caption>Página inicial do Website</caption>
 
@@ -16,7 +16,7 @@ Este projeto utiliza [Jekyll](http://jekyllrb.com/), que é um gerador de págin
 
 2. Primeiramente, fork o repositório em [viniciusaires7.github.io](https://github.com/viniciusaires7/viniciusaires7.github.io).
 
-<p align="center"><img src="images/fork.png" /></p>
+<p align="center"><img src="assets/images/fork.png" /></p>
 
 3. Após isso, abra um terminal e instale o [Jekyll](http://jekyllrb.com/) com o seguinte comando:
 
@@ -100,7 +100,7 @@ Este projeto foi idealizado por [@viniciusaires7](https://www.github.com/viniciu
 
 ##Créditos
 
-README inspirado nos repositórios do Zeno Rocha.
+README inspirado nos repositórios do [@zenorocha](https://github.com/zenorocha) :+1.
 
 ## Licença
 

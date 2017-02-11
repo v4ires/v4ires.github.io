@@ -2,10 +2,10 @@
 layout: post
 title: Maratona de Programação 2015
 type: article
-description: Nos dias 13 e 14 de novembro de 2015 a equipe MyCoffeeSoft representou o estado do Tocantins na final brasileira da Maratona de Programação no IBTA em São Paulo (SP)...
-background: /images/maratona-programacao.jpg
-thumbnail: /images/maratona-programacao_thumbnail.jpg
-img_post: /images/maratona-programacao-post.png
+description: Nos dias 13 e 14 de novembro de 2015 a equipe MyCoffeeSoft representou o estado do Tocantins na final brasileira da Maratona de Programação no IBTA em São Paulo (SP).
+background: /assets/images/maratona-programacao.jpg
+thumbnail: /assets/images/maratona-programacao_thumbnail.jpg
+img_post: /assets/images/maratona-programacao-post.png
 slug: maratona-de-programacao-2015
 ---
 
@@ -27,7 +27,7 @@ Fase Regional (UFT - TO)
 A primeira fase da Maratona de Programação foi realizada no dia 12 de setembro de 2015 em uma parceria entre a Sociedade Brasileira de Computação (<a href="http://www.sbc.org.br/" target="_blank">SBC</a>) e a Fundação Carlos Chagas (<a href="http://www.fcc.org.br/fcc/" target="_blank">FCC</a>). O evento foi organizado na UFT pelo Centro Acadêmico de Ciência da Computação (<a href="https://www.facebook.com/caccompuft" target="_blank">CACCOMP</a>) em conjunto com a coordenação e professores do curso. Na primeira fase, a sede de Palmas contou com seis times de três diferentes escolas, que foi um feito inédito para o estado do Tocantins.
 
 <p style="text-align: center;">
-<img src="/images/equipes-regional-maratona.jpg" style="width: 70%;"/><br>  
+<img src="{{ site.baseurl }}/assets/images/equipes-regional-maratona.jpg" style="width: 70%;"/><br>  
 <caption>Equipes Fase Regional Maratona de Programação UFT - Palmas (TO).</caption>
 </p>
 
@@ -68,7 +68,7 @@ b) O melhor time formado apenas por meninas;<br>
 c) Os melhores times dos estados ainda não representados na final: Alagoas, Sergipe, Tocantins e Rondônia.
 
 <p style="text-align: center;">
-<img src="/images/equipe-mycoffee.png" style="width: 70%;"/><br>  
+<img src="{{ site.baseurl }}/assets/images/equipe-mycoffee.png" style="width: 70%;"/><br>  
 <caption>Foto oficial equipe MyCoffeeSoft - São Paulo (SP).</caption>
 </p>
 
@@ -77,7 +77,7 @@ Após a classificação da equipe estávamos nós na Final Nacional da Maratona 
 
 <br>
 <p style="text-align: center;">
-<img src="/images/premiacao-maratona.jpg" style="width: 70%;"/><br>  
+<img src="{{ site.baseurl }}/assets/images/premiacao-maratona.jpg" style="width: 70%;"/><br>  
 <caption>Foto oficial da premiação como melhor equipe do Norte do país - São Paulo (SP).</caption>
 </p>
 

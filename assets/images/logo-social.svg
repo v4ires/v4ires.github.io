@@ -63,18 +63,18 @@
        id="g5244">
       <g
          id="g3879"
-         inkscape:export-filename="/home/vinicius/Documentos/git_project/viniciusaires7.github.io/images/logo-social.png"
+         inkscape:export-filename="/home/vinicius/Documentos/git_project/viniciusaires7.github.io{{ site.baseurl }}/assets/images/logo-social.png"
          inkscape:export-xdpi="90"
          inkscape:export-ydpi="90">
         <g
            id="g3365"
-           inkscape:export-filename="/home/vinicius/Documentos/git_project/viniciusaires7.github.io/images/logo-social.png"
+           inkscape:export-filename="/home/vinicius/Documentos/git_project/viniciusaires7.github.io{{ site.baseurl }}/assets/images/logo-social.png"
            inkscape:export-xdpi="90"
            inkscape:export-ydpi="90">
           <rect
              inkscape:export-ydpi="90"
              inkscape:export-xdpi="90"
-             inkscape:export-filename="/home/vinicius/Documentos/git_project/viniciusaires7.github.io/images/logo.jpg.png"
+             inkscape:export-filename="/home/vinicius/Documentos/git_project/viniciusaires7.github.io{{ site.baseurl }}/assets/images/logo.jpg.png"
              style="fill:#009688;fill-opacity:1;stroke:none"
              id="rect3032"
              width="1200"
@@ -189,7 +189,7 @@
          transform="matrix(0.08790671,0,0,0.08790671,150.63819,1039.3499)"
          id="g3897"
          style="fill:#000000"
-         inkscape:export-filename="/home/vinicius/Documentos/git_project/viniciusaires7.github.io/images/logo-social.png"
+         inkscape:export-filename="/home/vinicius/Documentos/git_project/viniciusaires7.github.io{{ site.baseurl }}/assets/images/logo-social.png"
          inkscape:export-xdpi="90"
          inkscape:export-ydpi="90">
         <use

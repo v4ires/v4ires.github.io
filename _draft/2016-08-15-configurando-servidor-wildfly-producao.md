@@ -3,7 +3,7 @@ layout: post
 title: Configurando Servidor Wildfly 10 para Produção
 type: article
 description: Tutorial de configuração do servidor Wildfly em um servidor de produção. Neste tutorial você irá aprender as configurações básicas do Wildfly e como fazer o deploy de sua aplicação Java.
-background: /images/configurando-servidor-wildfly-para-producao.png
+background: {{ site.baseurl }}/assets/images/configurando-servidor-wildfly-para-producao.png
 thumbnail: http://placehold.it/372x124
 img_post: http://placehold.it/1200x630
 slug: config-wildfly
