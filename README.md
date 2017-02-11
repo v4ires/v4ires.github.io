@@ -104,6 +104,6 @@ README inspirado nos repositórios do [@zenorocha](https://github.com/zenorocha)
 
 ## Licença
 
-[MIT License](http://www.viniciusaires.com.br/mit) © Vinícius Aires Barros
+[MIT License](http://www.viniciusaires.me/mit) © Vinícius Aires Barros
 
-Visite o site [http://viniciusaires.com.br](http://viniciusaires.com.br).
+Visite o site [http://viniciusaires.me](http://viniciusaires.me).
