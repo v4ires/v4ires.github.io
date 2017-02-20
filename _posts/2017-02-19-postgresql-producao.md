@@ -17,7 +17,7 @@ PostgreSQL é um sistema gerenciador de banco de dados objeto relacional (SGBDOR
 
 ### Let’s get started
 
-Neste tutorial você irá aprender a configurar o banco de dados PostgreSQL para uso em produção. Chega de conversa e vamos inciar o tutorial.
+Neste tutorial você aprenderá a configurar o banco de dados PostgreSQL para uso em produção. Chega de conversa e vamos inciar o tutorial.
 
 <p style="text-align: center;">
   <img src="{{ site.baseurl }}/assets/images/getstart-underwood.gif" style="width: 50%;"/>
@@ -62,22 +62,6 @@ $ psql -d postgres -U postgres psql
 # \q
 $ exit
 ```
-
-Libere o acesso remoto pela rede ao PostgreSQL (Opcional):<br>
-*substitua o 9.x pelo número de sua versão atual do PostgreSQL
-
-```bash
-$ sudo nano /etc/postgresql/9.x/main/postgresql.conf
-```
-Alterar: <br>
-	de ```# listen_address = 'localhost'``` <br>
-	para ```listen_address = '*'```
-
-```bash
-$ sudo nano /etc/postgresql/9.x/main/pg_hba.conf
-```
-Adicione a seguinte linha ao final do arquivo:<br>
-```host    all             all             0.0.0.0/0               md5```
 
 Reinicie o PostgreSQL:
 
@@ -128,7 +112,31 @@ Entrar no postgres com o novo usuário:
 $ psql --username=my_user --password
 ```
 
-### Extra
+### Extra (Opcional)
+
+#### Liberar acesso remoto ao PostgreSQL
+
+Libere o acesso remoto pela rede ao PostgreSQL (não recomendado para uso em produção):<br>
+*substitua o 9.x pelo número de sua versão atual do PostgreSQL<br>
+
+```bash
+$ sudo nano /etc/postgresql/9.x/main/postgresql.conf
+```
+Alterar: <br>
+	de ```# listen_address = 'localhost'``` <br>
+	para ```listen_address = '*'```
+
+```bash
+$ sudo nano /etc/postgresql/9.x/main/pg_hba.conf
+```
+Adicione a seguinte linha ao final do arquivo:<br>
+```host    all             all             0.0.0.0/0               md5```
+
+A forma mais correta de configurar o acesso externo ao banco de dados é configurar um proxy para acesso ao banco. Dessa maneira o acesso não ficará disponível abertamente na internet.
+
+Para mais informações recomendo o seguintes links [01](https://www.postgresql.org/docs/8.2/static/ssh-tunnels.html) e [02](https://support.cloud.engineyard.com/hc/en-us/articles/205408088-Access-Your-Database-Remotely-Through-an-SSH-Tunnel). Em breve postarei um tutorial ensinando passo a passo como fazer esta configuração.
+
+#### Instalando o PgAdmin
 
 Instale o programa PgAdmin3 para gerenciar o banco de dados com uma interface gráfica:
 
@@ -145,6 +153,10 @@ Chegamos ao final do tutorial, caso tenha acontecido algum problema favor report
 <p style="text-align: center;">
   <img src="{{ site.baseurl }}/assets/images/hasta-la-vista.gif" style="width: 50%;"/>
 </p>
+
+### Update
+
+Foi feito uma pequena correção no tutorial sobre como fazer o acesso remoto ao Banco de Dados, sugestão feita nos comentários do post. Obrigado todos pelo feedback ;)
 
 #### Disclaimer
 
