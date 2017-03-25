@@ -1,4 +1,4 @@
-# Meu website pessoal [![Build Status](https://travis-ci.org/viniciusaires7/viniciusaires7.github.io.svg?branch=master)](https://travis-ci.org/viniciusaires7/viniciusaires7.github.io)
+# Meu website pessoal [![Build Status](https://travis-ci.org/viniciusaires/viniciusaires.github.io.svg?branch=master)](https://travis-ci.org/viniciusaires/viniciusaires.github.io)
 
 <p align="center"><img src="assets//images/website-sreenshot.png" /></p>
 
@@ -14,7 +14,7 @@ Este projeto utiliza [Jekyll](http://jekyllrb.com/), que é um gerador de págin
 
 1. Instale o [Git](http://git-scm.com/downloads) e [Ruby](http://www.ruby-lang.org/pt/downloads/), se você ainda não tiver instalado.
 
-2. Primeiramente, fork o repositório em [viniciusaires7.github.io](https://github.com/viniciusaires7/viniciusaires7.github.io).
+2. Primeiramente, fork o repositório em [viniciusaires.github.io](https://github.com/viniciusaires/viniciusaires.github.io).
 
 <p align="center"><img src="assets/images/fork.png" /></p>
 
@@ -27,13 +27,13 @@ Este projeto utiliza [Jekyll](http://jekyllrb.com/), que é um gerador de págin
 4. Agora clone o projeto:
 
   ```sh
-  $ git clone git@github.com:YOUR_USER_NAME/viniciusaires7.github.io.git
+  $ git clone git@github.com:YOUR_USER_NAME/viniciusaires.github.io.git
   ```
 
 5. Vá até a pasta do projeto:
 
   ```sh
-  $ cd viniciusaires7.github.io/
+  $ cd viniciusaires.github.io/
   ```
 
 6. E finalmente execute:
@@ -92,11 +92,11 @@ Contém todas as seções da aplicação.
 
 ## Sincronizando seu fork
 
-Caso você já tenha feito fork a algum tempo você tem duas opções para garantir que estará trabalhando com as ultimas alterações, que pode ser simplesmente deletar seu fork e fazer um novo ou sincronizar seu fork com o repositório de origem usando as [instruções contidas na wiki](https://github.com/viniciusaires7/viniciusaires7.github.io/wiki/Sincronizando-seu-fork-com-o-projeto)
+Caso você já tenha feito fork a algum tempo você tem duas opções para garantir que estará trabalhando com as ultimas alterações, que pode ser simplesmente deletar seu fork e fazer um novo ou sincronizar seu fork com o repositório de origem usando as [instruções contidas na wiki](https://github.com/viniciusaires/viniciusaires.github.io/wiki/Sincronizando-seu-fork-com-o-projeto)
 
 ## Autor
 
-Este projeto foi idealizado por [@viniciusaires7](https://www.github.com/viniciusaires7)
+Este projeto foi idealizado por [@viniciusaires](https://www.github.com/viniciusaires)
 
 ##Créditos
 
