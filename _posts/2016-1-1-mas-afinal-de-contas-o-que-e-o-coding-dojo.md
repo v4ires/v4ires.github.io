@@ -19,4 +19,4 @@ Como funciona o Coding Dojo?
 
 O dojo não é um local para exibicionismo ou competição. O principal objetivo do Coding Dojo é a prática e troca de conhecimento entre os participantes em qualquer nível de conhecimento. Acontece muito de um programador ter bom conhecimento de uma linguagem e um conhecimento deficiente de outra, por isso é proposto à realização do Dojo, para ensinar através do compartilhamento de ideias e conhecimentos.
 
-<a href="http://dojoto.info/mas-afinal-de-contas-o-que-e-o-coding-dojo.html"><u>Leia mais...</u></a>
+<a href="http://dojoto.xyz/mas-afinal-de-contas-o-que-e-o-coding-dojo.html"><u>Leia mais...</u></a>

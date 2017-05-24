@@ -84,7 +84,7 @@ Após a classificação da equipe estávamos nós na Final Nacional da Maratona 
 Lista de Problemas Final Nacional
 ==================
 
-Os <a href="http://maratona.ime.usp.br/resultados15/contest_onesided.pdf" target="_blank">problemas da competição</a> foram os seguintes:
+Os <a href="http://maratona.ime.usp.br/hist/2015/resultados/contest_onesided.pdf" target="_blank">problemas da competição</a> foram os seguintes:
 
 <li>A - At most twice - Pablo Ariel Heiber</li>
 <li>B - Blood groups - Guilherme Albuquerque Pinto</li>

@@ -18,8 +18,8 @@ Abordamos durante os três dias do evento uma introdução ao controle de versã
 No último dia criamos um projeto simples colaborativo onde todos contribuiriam e colocaram em prática os comandos ensinados no minicurso <i class="em em-grimacing"></i>
 
 <p align="center">
-  <img src="http://viniciusaires.me/secompuft/img/secomp_logo_decription.png" style="max-width: 100%;"/><br>
-  <a href="http://viniciusaires.me/secompuft" target="_blank">Link</a> para o site VIII Semana Acadêmica de Ciência da Computação - UFT
+  <img src="https://raw.githubusercontent.com/v4ires/secompuft/gh-pages/img/secomp_logo_decription.png" style="max-width: 100%;"/><br>
+  <a href="http://v4ires.github.io/secompuft/" target="_blank">Link</a> para o site VIII Semana Acadêmica de Ciência da Computação - UFT
 </p>
 
 O minicurso bastante proveitoso, pois muitos dos presentes nunca tiveram um contato com controle de versão e nem com o Git e o Github!
@@ -32,7 +32,7 @@ No geral o planejamento e execução do minicurso um grande aprendizado, pois fo
 Segue abaixo os slides apresentados no minicurso, por fins didáticos e de aprendizado utilizei a ferramenta de desenvolvimento de apresentações em HTML5, CSS e JS o [RevealJS](http://lab.hakim.se/reveal-js/). A apresentação está hospedada no [Github](https://github.com/viniciusaires/minicurso-controle-de-versao-com-git-github), lá vocês poderão acompanhar o histórico dos commit's e também contribuírem com o projeto <i class="em em---1"></i>
 
 <div class="myIframe">
-  <iframe src="http://viniciusaires.me/controle-de-versao-com-git-github-conceitos-basicos" frameborder="0" allowfullscreen></iframe>
+  <iframe src="http://v4ires.github.io/controle-de-versao-com-git-github-conceitos-basicos" frameborder="0" allowfullscreen></iframe>
 </div>
 
 Acessem o <a href="http://viniciusaires.me/minicurso-controle-de-versao-com-git-github" target="_blank">link</a> para ver a apresentação em tela cheia <i class="em em-smile"></i>
