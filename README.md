@@ -1,4 +1,4 @@
-# Meu website pessoal [![Build Status](https://travis-ci.org/viniciusaires/viniciusaires.github.io.svg?branch=master)](https://travis-ci.org/viniciusaires/viniciusaires.github.io)
+# Meu website pessoal [![Build Status](https://travis-ci.org/v4ires/v4ires.github.io.svg?branch=master)](https://travis-ci.org/v4ires/v4ires.github.io)
 
 <p align="center"><img src="assets//images/website-sreenshot.png" /></p>
 
