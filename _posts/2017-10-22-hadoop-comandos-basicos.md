@@ -25,7 +25,7 @@ O projeto Apache Hadoop é um *software* de código aberto mantido pela Apache F
 
 ### Let's get started
 
-Neste tutorial você irá aprender à utilizar alguns comandos básicos do Apache Hadoop. Além disso, será mostrado como gerenciar arquivos no sistema de arquivos *Hadoop Distributed File System* (HDFS).
+Neste tutorial você irá aprender a utilizar alguns comandos básicos do Apache Hadoop. Além disso, será mostrado como gerenciar arquivos no sistema de arquivos *Hadoop Distributed File System* (HDFS).
 
 <p style="text-align: center;">
   <img src="{{ site.baseurl }}/assets/images/trash-pc.gif" style="width: 50%;"/>
@@ -33,7 +33,7 @@ Neste tutorial você irá aprender à utilizar alguns comandos básicos do Apach
 
 ### Hadoop Scripts Tools
 
-O Apache Hadoop fornece por padrão alguns *scripts* para o gerênciamento das instâncias da ferramenta. O diretório padrão onde se encontram os *scripts* é o ```bash hadoop/sbin```.
+O Apache Hadoop fornece por padrão alguns *scripts* para o gerenciamento das instâncias da ferramenta. O diretório padrão onde se encontram os *scripts* é o ```bash hadoop/sbin```.
 
 Como pode ser observado na pasta ```bash hadoop/sbin``` encontra-se os seguintes *scripts* que inclui sua versão para sistemas *bash* (Linux e MacOS) como também para o *prompt* de comando do sistema operacional MS Windows.
 
@@ -124,7 +124,7 @@ O comando mais utilizado é o HDFS, com ele é possível executar as rotinas *Ma
 
 Com o comando HDFS também é possível gerenciar os arquivos que estão no sistema de arquivos do Hadoop. A seguir e demonstrado alguns exemplos básicos de comando básicos no sistema de arquivos HDFS, note que todos os comando apresentados se assemelham ao comandos do *bash*.
 
-*ps: Todos os comando inciam com o prefixo ```bash hdfs dfs```, mas existe também a possibilidade de utilizar o comando depreciado ```bash hadoop fs```.
+*ps: Todos os comando iniciam com o prefixo ```bash hdfs dfs```, mas existe também a possibilidade de utilizar o comando depreciado ```bash hadoop fs```.
 
 Criar um diretório:
 
@@ -234,7 +234,7 @@ Agora você aprendeu alguns comandos básicos do Hadoop. Agora você já pode ge
 
 ## Disclaimer
 
-Material desenvolvido durante o meu Mestrado no Instituto de Ciências Matemáticas e de Computação da Universidade de São Paulo (<a href="http://icmc.usp.br/" target="_blank">ICMC-USP</a>). Além disso, faço um agradecimento em especial ao Laboratório de Sistemas Distribuídos e Programação Concorrente (<a href="http://lasdpc.icmc.usp.br/" target="_blank">LaSDPC</a>), o qual faço parte que me permitiu a criação deste material. Por fim, informo que é permitido livremente a reprodução integral desse material desde que sejam feitas as devidas referências ao autor ;)
+Material desenvolvido durante o meu Mestrado no Instituto de Ciências Matemáticas e de Computação da Universidade de São Paulo (<a href="http://icmc.usp.br/" target="_blank">ICMC-USP</a>). Além disso, faço um agradecimento em especial ao Laboratório de Sistemas Distribuídos e Programação Concorrente (<a href="http://lasdpc.icmc.usp.br/" target="_blank">LaSDPC</a>), o qual faço parte que me permitiu a criação deste material. Por fim, informo que é permitido livremente a reprodução integral deste material desde que sejam feitas as devidas referências ao autor ;)
 
 ## Referências
 

@@ -28,11 +28,11 @@ O projeto Apache Hadoop é um *software* de código aberto mantido pela Apache F
 
 ### Let's get started
 
-Neste tutorial você irá aprender à configurar o Apache Hadoop no modo *Multi Node*. Montando um ambiente capaz de executar seus primeiros *scripts* em *MapReduce*.
+Neste tutorial você irá aprender a configurar o Apache Hadoop no modo *Multi Node*. Montando um ambiente capaz de executar seus primeiros *scripts* em *MapReduce*.
 
 Primeiramente configure todas as máquinas que deseja montar um cluster Hadoop no modo *single node*. Para configurar basta seguir as instruções disponíveis no seguinte [link]({{ site.baseurl }}/config-hadoop-single-node).
 
-Outro ponto importante é a configuração do ssh sem senha entre todas máquinas que você pretende montar o cluster, o que inclui ela mesma (*localhost*). Para realizar essa tarefa basta seguir as intruções do tutorial disponibilizado no portal [Viva o Linux](https://www.vivaolinux.com.br/dica/SSH-sem-senha/).
+Outro ponto importante é a configuração do ssh sem senha entre todas máquinas que você pretende montar o cluster, o que inclui ela mesma (*localhost*). Para realizar essa tarefa basta seguir as instruções do tutorial disponibilizado no portal [Viva o Linux](https://www.vivaolinux.com.br/dica/SSH-sem-senha/).
 
 Após realizada essa primeira etapa vamos fazer as devidas modificações para que o Hadoop funcione em modo *cluster*. Para isso esse tutorial foi dividido em três tipos de configurações, nó *master*, *slaves* e para ambos.
 
@@ -211,7 +211,7 @@ Se tudo estiver ok, pronto temos o Apache Hadoop configurado em modo *Multi Node
 
 ## Disclaimer
 
-Material desenvolvido durante o meu Mestrado no Instituto de Ciências Matemáticas e de Computação da Universidade de São Paulo (<a href="http://icmc.usp.br/" target="_blank">ICMC-USP</a>). Além disso, faço um agradecimento em especial ao Laboratório de Sistemas Distribuídos e Programação Concorrente (<a href="http://lasdpc.icmc.usp.br/" target="_blank">LaSDPC</a>), o qual faço parte que me permitiu a criação deste material. Por fim, informo que é permitido livremente a reprodução integral desse material desde que sejam feitas as devidas referências ao autor ;)
+Material desenvolvido durante o meu Mestrado no Instituto de Ciências Matemáticas e de Computação da Universidade de São Paulo (<a href="http://icmc.usp.br/" target="_blank">ICMC-USP</a>). Além disso, faço um agradecimento em especial ao Laboratório de Sistemas Distribuídos e Programação Concorrente (<a href="http://lasdpc.icmc.usp.br/" target="_blank">LaSDPC</a>), o qual faço parte que me permitiu a criação deste material. Por fim, informo que é permitido livremente a reprodução integral deste material desde que sejam feitas as devidas referências ao autor ;)
 
 ## Referências
 
@@ -220,4 +220,4 @@ Material desenvolvido durante o meu Mestrado no Instituto de Ciências Matemáti
 [2] Apache Foundation. Hadoop: ***Hadoop Cluster Setup***. Acessado em Outubro de 2016. Disponível em:
 [http://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/ClusterSetup.html](http://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/ClusterSetup.html)
 
-[3] Michael G. Noll. Running Hadoop on Ubuntu Linux (Multi-Node Cluster). Acessado em Outbro de 2016. Disponível em: [http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-multi-node-cluster/](http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-multi-node-cluster/)
+[3] Michael G. Noll. Running Hadoop on Ubuntu Linux (Multi-Node Cluster). Acessado em Outubro de 2016. Disponível em: [http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-multi-node-cluster/](http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-multi-node-cluster/)

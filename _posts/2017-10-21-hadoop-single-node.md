@@ -28,7 +28,7 @@ O projeto Apache Hadoop é um *software* de código aberto mantido pela Apache F
 
 ### Let's get started
 
-Neste tutorial você irá aprender à configurar o Apache Hadoop no modo *Single Node*. Montando um ambiente capaz de executar seus primeiros *scripts* em *MapReduce*.
+Neste tutorial você irá aprender a configurar o Apache Hadoop no modo *Single Node*. Montando um ambiente capaz de executar seus primeiros *scripts* em *MapReduce*.
 
 <p style="text-align: center;">
   <img src="{{ site.baseurl }}/assets/images/coding-girl-fast.gif" style="width: 60%;"/>
@@ -66,7 +66,7 @@ Adicionar ao final do arquivo a variável JAVA_HOME:
 ~# JAVA_HOME="DIRETORIO_JAVA"
 ```
 
-Atualize os indíces da variável de ambiente:
+Atualize os índices da variável de ambiente:
 
 ```bash
 ~# source /etc/environment
@@ -153,7 +153,7 @@ export HADOOP_OPTS="-Djava.library.path=$HADOOP_INSTALL/lib"
 
 OBS: Substitua ***caminho_para_o_java_home*** e ***caminho_para_o_hadoop*** pelos seus respectivos paths ;)
 
-Atualize os indíces das variáveis de ambiente:
+Atualize os índices das variáveis de ambiente:
 
 ```bash
 ~# source ~/.bashrc
@@ -341,7 +341,7 @@ Adicione esta linha no arquivo /etc/profile:
 
 Esta mudança muda o heap de memória do Java para 1024 mb. Por padrão é 128 mb.
 
-Agora vamos atualizar os indíces do arquivo /etc/profile:
+Agora vamos atualizar os índices do arquivo /etc/profile:
 
 ```bash
   ~# source /etc/profile
@@ -373,11 +373,11 @@ Se tudo estiver ok, pronto temos o Apache Hadoop configurado em modo *Single Nod
   <img src="{{ site.baseurl }}/assets/images/elephant-crazy.gif" style="width: 50%;"/>
 </p>
 
-O artigo Configuração do Apache Hadoop em Multi Node está diponível no seguinte <a href="{{ site.baseurl }}/config-hadoop-multi-node/" target="_blank">link</a>.
+O artigo Configuração do Apache Hadoop em Multi Node está disponível no seguinte <a href="{{ site.baseurl }}/config-hadoop-multi-node/" target="_blank">link</a>.
 
 ## Disclaimer
 
-Material desenvolvido durante o meu Mestrado no Instituto de Ciências Matemáticas e de Computação da Universidade de São Paulo (<a href="http://icmc.usp.br/" target="_blank">ICMC-USP</a>). Além disso, faço um agradecimento em especial ao Laboratório de Sistemas Distribuídos e Programação Concorrente (<a href="http://lasdpc.icmc.usp.br/" target="_blank">LaSDPC</a>), o qual faço parte que me permitiu a criação deste material. Por fim, informo que é permitido livremente a reprodução integral desse material desde que sejam feitas as devidas referências ao autor ;)
+Material desenvolvido durante o meu Mestrado no Instituto de Ciências Matemáticas e de Computação da Universidade de São Paulo (<a href="http://icmc.usp.br/" target="_blank">ICMC-USP</a>). Além disso, faço um agradecimento em especial ao Laboratório de Sistemas Distribuídos e Programação Concorrente (<a href="http://lasdpc.icmc.usp.br/" target="_blank">LaSDPC</a>), o qual faço parte que me permitiu a criação deste material. Por fim, informo que é permitido livremente a reprodução integral deste material desde que sejam feitas as devidas referências ao autor ;)
 
 ## Referências
 
