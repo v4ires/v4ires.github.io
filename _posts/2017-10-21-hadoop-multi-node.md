@@ -9,7 +9,7 @@ img_post: /assets/images/configurando-hadoop-multi-node-post.png
 slug: config-hadoop-multi-node
 ---
 
-## Instalação do Apache Hadoop 2.7.x em modo Multi Node
+## Instalação do Apache Hadoop 2.8.x em modo Multi Node
 
 Requisitos iniciais:
 

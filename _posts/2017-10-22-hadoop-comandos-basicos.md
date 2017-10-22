@@ -9,7 +9,7 @@ img_post: /assets/images/hadoop-cmd-basicos-post.png
 slug: hadoop-cmd-basicos
 ---
 
-## Comandos básicos do Apache Hadoop 2.x
+## Comandos básicos do Apache Hadoop 2.8.x
 
 #### Requisitos iniciais:
 
