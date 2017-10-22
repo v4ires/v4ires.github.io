@@ -48,12 +48,6 @@ Verifique a instalação do Java:
 ~# java -version
 ```
 
-Verifique o path de instalação do Java:
-
-```bash
-~# update-alternative --config java
-```
-
 Adicionar o JAVA_HOME na variável PATH:
 
 ```bash
@@ -63,7 +57,7 @@ Adicionar o JAVA_HOME na variável PATH:
 Adicionar ao final do arquivo a variável JAVA_HOME:
 
 ```bash
-~# JAVA_HOME="DIRETORIO_JAVA"
+~# JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 ```
 
 Atualize os índices da variável de ambiente:
@@ -299,19 +293,19 @@ Adicione as seguintes propriedades:
 Formate o sistema de arquivos HDFS:
 
 ```bash
-  ~# hadoop namenode -format
+~# hadoop namenode -format
 ```
 
 Inicie os serviços do Hadoop:
 
 ```bash
-  ~# start-dfs.sh && start-yarn.sh
+~# start-dfs.sh && start-yarn.sh
 ```
 
 Verifique os processos do Hadoop:
 
 ```bash
-  ~# jps
+~# jps
 ```
 
 O console deve aparecer uma saída semelhante a essa:
@@ -336,7 +330,7 @@ Caso enfrente algum problema com relação ao tamanho do *heap* de memória da J
 Adicione esta linha no arquivo /etc/profile:
 
 ```bash
-  export JVM_ARGS="-Xms1024m -Xmx1024m"
+export JVM_ARGS="-Xms1024m -Xmx1024m"
 ```
 
 Esta mudança muda o heap de memória do Java para 1024 mb. Por padrão é 128 mb.
@@ -344,7 +338,7 @@ Esta mudança muda o heap de memória do Java para 1024 mb. Por padrão é 128 m
 Agora vamos atualizar os índices do arquivo /etc/profile:
 
 ```bash
-  ~# source /etc/profile
+~# source /etc/profile
 ```
 
 2ª Etapa:
@@ -352,7 +346,7 @@ Agora vamos atualizar os índices do arquivo /etc/profile:
 Adicione ou edite a seguinte variável de ambiente:
 
 ```
-  ~# export HADOOP_CLIENT_OPTS="-Xmx1024m $HADOOP_CLIENT_OPTS"
+~# export HADOOP_CLIENT_OPTS="-Xmx1024m $HADOOP_CLIENT_OPTS"
 ```
 
 3ª Etapa:

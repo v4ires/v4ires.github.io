@@ -238,5 +238,7 @@ Material desenvolvido durante o meu Mestrado no Instituto de Ciências Matemáti
 
 ## Referências
 
-Apache Foundation. Hadoop: **Apache Hadoop**. Acessado em Agosto de 2016. Disponível em: [http://hadoop.apache.org](http://hadoop.apache.org)
-Dzone. Dzone/Big Data Zone. ***Top 10 Hadoop Shell Commands to Manage HDFS***. Acessado em Outubro de 2016. Disponível em [https://dzone.com/articles/top-10-hadoop-shell-commands](https://dzone.com/articles/top-10-hadoop-shell-commands)
+[1] Apache Foundation. Hadoop: **Apache Hadoop**. Acessado em Agosto de 2016. Disponível em: [http://hadoop.apache.org](http://hadoop.apache.org)
+Dzone
+
+[2] Dzone/Big Data Zone. ***Top 10 Hadoop Shell Commands to Manage HDFS***. Acessado em Outubro de 2016. Disponível em [https://dzone.com/articles/top-10-hadoop-shell-commands](https://dzone.com/articles/top-10-hadoop-shell-commands)
