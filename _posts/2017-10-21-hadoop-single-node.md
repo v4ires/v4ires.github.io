@@ -168,7 +168,7 @@ Agora vamos editar o arquivo de variáveis de ambiente do Hadoop:
 Edite a variável de ambiente JAVA_HOME:
 
 ```bash
-~# export JAVA_HOME=/opt/wsarch-env-client/jdk
+~# export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 ```
 
 Vamos criar o diretório onde será o ponto de montagem do sistemas de arquivos do Hadoop o HDFS:
