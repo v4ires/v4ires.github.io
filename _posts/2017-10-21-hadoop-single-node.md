@@ -108,22 +108,16 @@ Agora com a chave gerada vamos adicionar ela ao diretório de chaves autorizadas
 
 ### Configure o Apache Hadoop (Single Node)
 
-Faça o download do Apache Hadoop, neste caso a versão 2.7.3:
+Faça o download do Apache Hadoop, neste caso a versão 2.8.1:
 
 ```bash
-~# wget http://mirror.nbtelecom.com.br/apache/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz
+~# wget http://mirror.nbtelecom.com.br/apache/hadoop/common/hadoop-2.8.1/hadoop-2.8.1.tar.gz
 ```
 
 Descompacte o Apache Hadoop no diretório /opt:
 
 ```bash
-~# tar -zxvf hadoop-2.7.3.tar.gz
-```
-
-Mude o dono da pasta para o usuário hadoop:
-
-```bash
-~# chown hadoop:allusers -R hadoop-2.7.3/
+~# tar -zxvf hadoop-2.8.1.tar.gz
 ```
 
 Agora vamos configurar as variáveis de ambiente:
@@ -174,7 +168,7 @@ ou
 Agora vamos editar o arquivo de variáveis de ambiente do Hadoop:
 
 ```bash
-~# vim hadoop-2.7.3/etc/hadoop/hadoop-env.sh
+~# vim hadoop-2.8.1/etc/hadoop/hadoop-env.sh
 ```
 
 Edite a variável de ambiente JAVA_HOME:
@@ -193,7 +187,7 @@ Vamos criar o diretório onde será o ponto de montagem do sistemas de arquivos 
 Vamos configurar o arquivo hdfs-site.xml com o caminho das pastas criadas:
 
 ```bash
-~# vim hadoop-2.7.3/etc/hadoop/hdfs-site.xml
+~# vim hadoop-2.8.1/etc/hadoop/hdfs-site.xml
 ```
 
 Adicione as seguintes propriedades:
@@ -228,7 +222,7 @@ Crie um diretório temporário na pasta de instalação do Hadoop:
 Vamos configurar o arquivo core-site.xml
 
 ```bash
-~# vim hadoop-2.7.3/etc/hadoop/core-site.xml
+~# vim hadoop-2.8.1/etc/hadoop/core-site.xml
 ```
 
 Adicione as seguintes propriedades
@@ -256,7 +250,7 @@ Adicione as seguintes propriedades
 Configure o arquivo mapred-site.xml:
 
 ```bash
-~# cp hadoop-2.7.3/etc/hadoop/mapred-site.xml.template hadoop-2.7.3/etc/hadoop/mapred-site.xml
+~# cp hadoop-2.8.1/etc/hadoop/mapred-site.xml.template hadoop-2.8.1/etc/hadoop/mapred-site.xml
 ```
 
 Adicione a seguinte propriedade:

@@ -62,7 +62,7 @@ No caso do nó *master* iremos manter apenas a configuração do *namenode*, rem
 
  <property>
    <name>dfs.namenode.name.dir</name>
-   <value>file:/opt/bigdata/hadoop-2.7.3/hadoop_store/hdfs/namenode</value>
+   <value>file:/opt/bigdata/hadoop-2.8.1/hadoop_store/hdfs/namenode</value>
  </property>
 ```
 
@@ -112,7 +112,7 @@ Para os nós *slaves* iremos manter a configuração do *datanode*, removendo a 
  
  <property>
    <name>dfs.datanode.data.dir</name>
-   <value>file:/opt/bigdata/hadoop-2.7.3/hadoop_store/hdfs/datanode</value>
+   <value>file:/opt/bigdata/hadoop-2.8.1/hadoop_store/hdfs/datanode</value>
  </property>
 ```
 
@@ -125,7 +125,7 @@ Para ambas as máquinas tanto *master* e *slave* iremos manter a configuração 
 ```xml
  <property>
   <name>hadoop.tmp.dir</name>
-  <value>/opt/bigdata/hadoop-2.7.3/tmp</value>
+  <value>/opt/bigdata/hadoop-2.8.1/tmp</value>
   <description>Temporary Directory.</description>
  </property>
 
