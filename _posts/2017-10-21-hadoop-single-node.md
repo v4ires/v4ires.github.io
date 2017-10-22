@@ -57,7 +57,7 @@ Verifique o path de instalação do Java:
 Adicionar o JAVA_HOME na variável PATH:
 
 ```bash
-~# nano /etc/environments
+~# vim /etc/environments
 ```
 
 Adicionar ao final do arquivo a variável JAVA_HOME:
@@ -130,14 +130,14 @@ Agora vamos configurar as variáveis de ambiente:
 
 ```bash
 #caso você prefira que todos usuários do sistema tenham as variáveis de ambiente
-~# nano /etc/profile 
+~# vim /etc/profile 
 ```
 
 ou
 
 ```bash
 #caso você prefira que apenas o seu usuário tenham as variáveis de ambiente
-~# nano ~/.bashrc 
+~# vim ~/.bashrc 
 ```
 
 Adicione ao final do arquivo os seguintes variáveis de ambiente:
@@ -174,7 +174,7 @@ ou
 Agora vamos editar o arquivo de variáveis de ambiente do Hadoop:
 
 ```bash
-~# nano hadoop-2.7.3/etc/hadoop/hadoop-env.sh
+~# vim hadoop-2.7.3/etc/hadoop/hadoop-env.sh
 ```
 
 Edite a variável de ambiente JAVA_HOME:
@@ -193,7 +193,7 @@ Vamos criar o diretório onde será o ponto de montagem do sistemas de arquivos 
 Vamos configurar o arquivo hdfs-site.xml com o caminho das pastas criadas:
 
 ```bash
-~# nano hadoop-2.7.3/etc/hadoop/hdfs-site.xml
+~# vim hadoop-2.7.3/etc/hadoop/hdfs-site.xml
 ```
 
 Adicione as seguintes propriedades:
@@ -228,7 +228,7 @@ Crie um diretório temporário na pasta de instalação do Hadoop:
 Vamos configurar o arquivo core-site.xml
 
 ```bash
-~# nano hadoop-2.7.3/etc/hadoop/core-site.xml
+~# vim hadoop-2.7.3/etc/hadoop/core-site.xml
 ```
 
 Adicione as seguintes propriedades
@@ -277,7 +277,7 @@ Adicione a seguinte propriedade:
 Configure o arquivo o arquivo yarn-site.xml:
 
 ```bash
-~# nano yarn-site.xml
+~# vim yarn-site.xml
 ```
 
 Adicione as seguintes propriedades:
@@ -379,13 +379,11 @@ Se tudo estiver ok, pronto temos o Apache Hadoop configurado em modo *Single Nod
   <img src="{{ site.baseurl }}/assets/images/elephant-crazy.gif" style="width: 50%;"/>
 </p>
 
-Material desenvolvido durante o Mestrado no Instituto de Ciências Matemáticas e de Computação da Universidadade de São Paulo (<a href="http://icmc.usp.br/" target="_blank">ICMC-USP</a>) e Laboratório de Sistemas Distribuídos e Programação Concorrente (<a href="http://lasdpc.icmc.usp.br/" target="_blank">LaSDPC</a>).
-
-O artigo Configuração do Apache Hadoop em Multi Node está <a href="{{ site.baseurl }}/config-hadoop-multi-node/" target="_blank">diponível</a>.
+O artigo Configuração do Apache Hadoop em Multi Node está diponível no seguinte <a href="{{ site.baseurl }}/config-hadoop-multi-node/" target="_blank">link</a>.
 
 ## Disclaimer
 
-É permitido livremente a reprodução integral desse material desde que sejam feitas as devidas referências ao autor ;)
+Material desenvolvido durante o meu Mestrado no Instituto de Ciências Matemáticas e de Computação da Universidade de São Paulo (<a href="http://icmc.usp.br/" target="_blank">ICMC-USP</a>). Além disso, faço um agradecimento em especial ao Laboratório de Sistemas Distribuídos e Programação Concorrente (<a href="http://lasdpc.icmc.usp.br/" target="_blank">LaSDPC</a>), o qual faço parte que me permitiu a criação deste material. Por fim, informo que é permitido livremente a reprodução integral desse material desde que sejam feitas as devidas referências ao autor ;)
 
 ## Referências
 

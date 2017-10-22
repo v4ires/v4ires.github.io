@@ -30,9 +30,9 @@ O projeto Apache Hadoop é um *software* de código aberto mantido pela Apache F
 
 Neste tutorial você irá aprender à configurar o Apache Hadoop no modo *Multi Node*. Montando um ambiente capaz de executar seus primeiros *scripts* em *MapReduce*.
 
-Primeiramente configure todas as máquinas que deseja montar um cluster Hadoop no modo *single node*. Para configurar basta seguir as instruções disponíveis no [link](https://gist.github.com/viniciusaires7/0f85dbefc99f0804a5e486b1c63c44ed).
+Primeiramente configure todas as máquinas que deseja montar um cluster Hadoop no modo *single node*. Para configurar basta seguir as instruções disponíveis no seguinte [link]({{ site.baseurl }}/config-hadoop-single-node).
 
-Outro ponto importante é a configuração do ssh sem senha entre todas máquinas que você pretende montar o cluster, o que inclui ela mesma (*localhost*). Para realizar essa tarefa basta seguir as intruções do tutorial disponibilizado no portal Viva o Linux [link](https://www.vivaolinux.com.br/dica/SSH-sem-senha/).
+Outro ponto importante é a configuração do ssh sem senha entre todas máquinas que você pretende montar o cluster, o que inclui ela mesma (*localhost*). Para realizar essa tarefa basta seguir as intruções do tutorial disponibilizado no portal [Viva o Linux](https://www.vivaolinux.com.br/dica/SSH-sem-senha/).
 
 Após realizada essa primeira etapa vamos fazer as devidas modificações para que o Hadoop funcione em modo *cluster*. Para isso esse tutorial foi dividido em três tipos de configurações, nó *master*, *slaves* e para ambos.
 
@@ -45,7 +45,7 @@ Após realizada essa primeira etapa vamos fazer as devidas modificações para q
 Para o nó *master* basta editar o arquivo de configuração etc/hadoop/hdfs-site.xml:
 
 ```bash
-~# nano hdfs-site.xml
+~# vim hdfs-site.xml
 ```
 
 No caso do nó *master* iremos manter apenas a configuração do *namenode*, removendo a propriedade do *datanode*:
@@ -77,7 +77,7 @@ Vamos criar o arquivo com os endereços IP's das máquinas *slaves* do Hadoop no
 Vamos adicionar o IP de todas as máquinas *slaves* em etc/hadoop/slaves:
 
 ```bash
-~# nano slaves
+~# vim slaves
 ```
 
 Adicione os endereços IP's ou *hostname* de cada uma das máquinas slaves:
@@ -209,11 +209,9 @@ Se tudo estiver ok, pronto temos o Apache Hadoop configurado em modo *Multi Node
   <img src="{{ site.baseurl }}/assets/images/sheldon-fuck.gif" style="width: 60%;"/>
 </p>
 
-Material desenvolvido durante o Mestrado no Instituto de Ciências Matemáticas e de Computação da Universidadade de São Paulo (<a href="http://icmc.usp.br/" target="_blank">ICMC-USP</a>) e Laboratório de Sistemas Distribuídos e Programação Concorrente (<a href="http://lasdpc.icmc.usp.br/" target="_blank">LaSDPC</a>).
-
 ## Disclaimer
 
-É permitido livremente a reprodução integral desse material desde que sejam feitas as devidas referências ao autor ;)
+Material desenvolvido durante o meu Mestrado no Instituto de Ciências Matemáticas e de Computação da Universidade de São Paulo (<a href="http://icmc.usp.br/" target="_blank">ICMC-USP</a>). Além disso, faço um agradecimento em especial ao Laboratório de Sistemas Distribuídos e Programação Concorrente (<a href="http://lasdpc.icmc.usp.br/" target="_blank">LaSDPC</a>), o qual faço parte que me permitiu a criação deste material. Por fim, informo que é permitido livremente a reprodução integral desse material desde que sejam feitas as devidas referências ao autor ;)
 
 ## Referências
 
