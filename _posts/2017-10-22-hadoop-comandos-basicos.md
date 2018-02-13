@@ -35,7 +35,7 @@ Neste tutorial você irá aprender a utilizar alguns comandos básicos do Apache
 
 O Apache Hadoop fornece por padrão alguns *scripts* para o gerenciamento das instâncias da ferramenta. O diretório padrão onde se encontram os *scripts* é o ```bash hadoop/sbin```.
 
-Como pode ser observado na pasta ```bash hadoop/sbin``` encontra-se os seguintes *scripts* que inclui sua versão para sistemas *bash* (Linux e MacOS) como também para o *prompt* de comando do sistema operacional MS Windows.
+Observa-se que na pasta ```bash hadoop/sbin``` encontra-se os seguintes *scripts* que inclui sua versão para sistemas *bash* (Linux e MacOS) como também para o *prompt* de comando do sistema operacional MS Windows.
 
 ```bash
 distribute-exclude.sh    start-all.cmd        stop-balancer.sh
@@ -97,7 +97,7 @@ Existem alguns *scripts deprecated* neste diretório, mas que ainda funcionam pe
 ~$ stop-all.sh
 ```
 
-### Comando Básicos do Hadoop
+### Comandos Básicos do Apache Hadoop
 
 O Apache Hadoop fornece alguns arquivos binários onde podem ser realizadas algumas operações importantes. O diretório padrão onde se encontra os binários é o ```bash hadoop/bin```, nele você encontra os seguintes binários:
 
