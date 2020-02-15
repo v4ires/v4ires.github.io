@@ -14,28 +14,10 @@ layout: compress
   </script>
 </head>
 
-<body id="top" class="scrollspy">
-  <div class="navbar-fixed">
-    <nav id="nav_f" class="default_color" role="navigation">
-      <div class="container">
-        <div class="nav-wrapper">
-          <a href="/" id="logo-container" class="brand-logo"><img src="{{ site.baseurl }}{{ site.baseurl }}/assets/images/logo.svg" alt="" style="height: 56px; width: 100%;"/></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="/">Início</a></li>
-            <li><a href="/blog">Blog</a></li>
-          </ul>
-          <ul id="nav-mobile" class="side-nav">
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/blog">Blog</a></li>
-          </ul>
-          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-        </div>
-      </div>
-    </nav>
-  </div>
+{% include navbar_clean.html %}
 
-  {{ content }}
+{{ content }}
 
-  {% include footer.html %}
-  {% include script.html %}
+{% include footer.html %}
+{% include script.html %}
 </body>
