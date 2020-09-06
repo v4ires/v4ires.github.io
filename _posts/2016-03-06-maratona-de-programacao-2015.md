@@ -108,10 +108,6 @@ Abaixo você pode conferir um pequeno vídeo com um breve resumo de como foi a M
   <iframe width="640" height="360" src="https://www.youtube.com/embed/wXBDoX4PZj4" frameborder="0" allowfullscreen></iframe>
 </p>
 
-<p class="myIframe" style="text-align: center">
-  <iframe width="640" height="360" src="https://www.youtube.com/embed/48xG4P1yrQg" frameborder="0" allowfullscreen></iframe>
-</p>
-
 Referências
 ==================
 

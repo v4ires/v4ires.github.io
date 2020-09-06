@@ -34,7 +34,7 @@ Primeiramente configure todas as máquinas que deseja montar um cluster Hadoop n
 
 Outro ponto importante é a configuração do ssh sem senha entre todas máquinas que você pretende montar o cluster, o que inclui ela mesma (*localhost*). Para realizar essa tarefa basta seguir as instruções do tutorial disponibilizado no portal [Viva o Linux](https://www.vivaolinux.com.br/dica/SSH-sem-senha/).
 
-Após realizada essa primeira etapa vamos fazer as devidas modificações para que o Hadoop funcione em modo *cluster*. Para isso esse tutorial foi dividido em três tipos de configurações, nó *master*, *slaves* e para ambos.
+Após realizada essa primeira etapa faça as devidas modificações para que o Hadoop funcione em modo *cluster*. Para isso esse tutorial foi dividido em três tipos de configurações, nó *master*, *slaves* e para ambos.
 
 <p style="text-align: center;">
   <img src="{{ site.baseurl }}/assets/images/programming-fire.gif" style="width: 50%;"/>
@@ -44,13 +44,13 @@ Após realizada essa primeira etapa vamos fazer as devidas modificações para q
 
 Para o nó *master* basta editar o arquivo de configuração etc/hadoop/hdfs-site.xml:
 
-```bash
+{% highlight shell %}
 ~# vim hdfs-site.xml
-```
+{% endhighlight %}
 
 No caso do nó *master* iremos manter apenas a configuração do *namenode*, removendo a propriedade do *datanode*:
 
-```xml
+{% highlight xml %}
  <property>
   <name>dfs.replication</name>
   <value>1</value>
@@ -64,25 +64,25 @@ No caso do nó *master* iremos manter apenas a configuração do *namenode*, rem
    <name>dfs.namenode.name.dir</name>
    <value>file:/opt/bigdata/hadoop-2.8.1/hadoop_store/hdfs/namenode</value>
  </property>
-```
+{% endhighlight %}
 
 *ps: a tag ```</property>``` deve ficar dentro de uma tag ```<configuration></configuration>```
 
-Vamos criar o arquivo com os endereços IP's das máquinas *slaves* do Hadoop no diretório etc/hadoop:
+Crie o arquivo com os endereços IP's das máquinas *slaves* do Hadoop no diretório etc/hadoop:
 
-```bash
+{% highlight shell %}
 ~# touch slaves
-```
+{% endhighlight %}
 
-Vamos adicionar o IP de todas as máquinas *slaves* em etc/hadoop/slaves:
+Adicione o IP de todas as máquinas *slaves* em etc/hadoop/slaves:
 
-```bash
+{% highlight shell %}
 ~# vim slaves
-```
+{% endhighlight %}
 
 Adicione os endereços IP's ou *hostname* de cada uma das máquinas slaves:
 
-```
+{% highlight plaintext %}
 IP_NODE_01
 IP_NODE_02
 IP_NODE_03
@@ -92,7 +92,7 @@ IP_NODE_0N
 .
 .
 .
-```
+{% endhighlight %}
 
 *ps: as informações deste arquivo devem ser apenas os IP's ou Hostname das máquinas separadas por quebra de linha (enter)
 
@@ -100,21 +100,21 @@ IP_NODE_0N
 
 Para os nós *slaves* iremos manter a configuração do *datanode*, removendo a propriedade *namenode*:
 
-```xml
- <property>
+{% highlight xml %}
+<property>
   <name>dfs.replication</name>
   <value>1</value>
   <description>Default block replication.
   The actual number of replications can be specified when the file is created.
   The default is used if replication is not specified in create time.
   </description>
- </property>
- 
- <property>
-   <name>dfs.datanode.data.dir</name>
-   <value>file:/opt/bigdata/hadoop-2.8.1/hadoop_store/hdfs/datanode</value>
- </property>
-```
+</property>
+
+<property>
+  <name>dfs.datanode.data.dir</name>
+  <value>file:/opt/bigdata/hadoop-2.8.1/hadoop_store/hdfs/datanode</value>
+</property>
+{% endhighlight %}
 
 *ps: a tag ```</property>``` deve ficar dentro de uma tag ```<configuration></configuration>```
 
@@ -122,41 +122,41 @@ Para os nós *slaves* iremos manter a configuração do *datanode*, removendo a 
 
 Para ambas as máquinas tanto *master* e *slave* iremos manter a configuração do diretório tmp e iremos configurar o IP do nó *master* (*Namenode*) com a propriedade fs.defaultFS:
 
-```xml
- <property>
+{% highlight xml %}
+<property>
   <name>hadoop.tmp.dir</name>
   <value>/opt/bigdata/hadoop-2.8.1/tmp</value>
   <description>Temporary Directory.</description>
- </property>
+</property>
 
- <property>
+<property>
   <name>fs.defaultFS</name>
   <value>hdfs://IP_MASTER:9000</value>
   <description>Use HDFS as file storage engine</description>
- </property>
-```
+</property>
+{% endhighlight %}
 
 *ps: a tag ```</property>``` deve ficar dentro de uma tag ```<configuration></configuration>```
 
-Vamos editar e adicionar as seguintes propriedades ao arquivo yarn-site.xml:
+Edite e adicione as seguintes propriedades ao arquivo yarn-site.xml:
 
-```xml
-  <property>
-          <name>yarn.resourcemanager.hostname</name>
-          <value>frontend</value>
-          <description>The hostname of the RM.</description>
-  </property>
+{% highlight xml %}
+<property>
+  <name>yarn.resourcemanager.hostname</name>
+  <value>frontend</value>
+  <description>The hostname of the RM.</description>
+</property>
 
-  <property>
-           <name>yarn.nodemanager.aux-services</name>
-           <value>mapreduce_shuffle</value>
-  </property>
+<property>
+  <name>yarn.nodemanager.aux-services</name>
+  <value>mapreduce_shuffle</value>
+</property>
 
-  <property>
-           <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
-           <value>org.apache.hadoop.mapred.ShuffleHandler</value>
-  </property>
-```
+<property>
+  <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+  <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+</property>
+{% endhighlight %}
 
 *ps: a tag ```</property>``` deve ficar dentro de uma tag ```<configuration></configuration>```
 
@@ -164,44 +164,44 @@ Vamos editar e adicionar as seguintes propriedades ao arquivo yarn-site.xml:
 
 Após as devidas configurações, logue via ssh na máquina master e formate o *namenode*:
 
-```bash
+{% highlight shell %}
 ~# hadoop namenode -format
-```
+{% endhighlight %}
 
-Agora vamos iniciar o Hadoop e verificar se ele está funcionando em modo cluster:
+Inicie o Hadoop e verificar se ele está funcionando em modo cluster:
 
-```bash
+{% highlight shell %}
 ~# start-dfs.sh && start-yarn.sh
-```
+{% endhighlight %}
 
 Se tudo der certo, verifique os processos Hadoop que estão executando no nó master:
 
-```bash
+{% highlight shell %}
 ~# jps
-```
+{% endhighlight %}
 
 Como você está acessando o nó *master* deve aparecer para você apenas os seguintes processos:
 
-```bash
+{% highlight shell %}
 5417 Jps
 4656 NameNode
 5123 ResourceManager
 4952 SecondaryNameNode
-```
+{% endhighlight %}
 
 Acesse cada um dos nós *slaves* e verifique os processos que Hadoop que estão executando:
 
-```bash
+{% highlight shell %}
 ~# jps
-```
+{% endhighlight %}
 
 Como você está acessando os nós *slave* deve aparecer para você apenas os seguintes processos:
 
-```bash
+{% highlight shell %}
 14372 Jps
 13987 DataNode
 14168 NodeManager
-```
+{% endhighlight %}
 
 Se tudo estiver ok, pronto temos o Apache Hadoop configurado em modo *Multi Node* ;)
 

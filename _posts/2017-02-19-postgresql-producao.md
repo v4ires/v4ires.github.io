@@ -27,90 +27,90 @@ Neste tutorial você aprenderá a configurar o banco de dados PostgreSQL para us
 
 Atualize os repositórios:
 
-```bash
-$ sudo apt-get update
-```
+{% highlight shell %}
+~$ sudo apt-get update
+{% endhighlight %}
 
 Instale o PostgreSQL:
 
-```bash
-$ sudo apt-get install postgresql postgresql-contrib
-```
+{% highlight shell %}
+~$ sudo apt-get install postgresql postgresql-contrib
+{% endhighlight %}
 
 Teste o acesso ao PostgreSQL:
 
-```bash
-$ sudo -i -u postgres
-$ psql
-# \q
-```
+{% highlight shell %}
+~$ sudo -i -u postgres
+~$ psql
+~# \q
+{% endhighlight %}
 
 Criar, Deletar e Acessar, uma base de dados:
 
-```bash
-$ createdb mydb
-$ dropdb mydb
-$ psql mydb
-```
+{% highlight shell %}
+~$ createdb mydb
+~$ dropdb mydb
+~$ psql mydb
+{% endhighlight %}
 
 Alterar a senha do usuário postgres:
 
-```bash
-$ sudo -i -u postgres
-$ psql -d postgres -U postgres psql
-# ALTER USER postgres with PASSWORD 'minha_senha';
-# \q
-$ exit
-```
+{% highlight shell %}
+~$ sudo -i -u postgres
+~$ psql -d postgres -U postgres psql
+~# ALTER USER postgres with PASSWORD 'minha_senha';
+~# \q
+~$ exit
+{% endhighlight %}
 
 Reinicie o PostgreSQL:
 
-```bash
-$ sudo service postgresql restart
-```
+{% highlight shell %}
+~$ sudo service postgresql restart
+{% endhighlight %}
 
 Adicione o postgres ao grupo sudo:
 
-```bash
-$ sudo gpasswd -a postgres sudo
-```
+{% highlight shell %}
+~$ sudo gpasswd -a postgres sudo
+{% endhighlight %}
 
 Alternar para usuário postgres no terminal como superusuário:
 
-```bash
-$ sudo su - postgres
-```
+{% highlight shell %}
+~$ sudo su - postgres
+{% endhighlight %}
 
 Crie um novo usuário no postgres:
 
-```bash
-$ sudo -u postgres createuser -d -R -P my_user
-```
+{% highlight shell %}
+~$ sudo -u postgres createuser -d -R -P my_user
+{% endhighlight %}
 
 Crie uma base de dados para o novo usuário:
 
-```bash
-$ sudo -u postgres createdb -O my_user db_test
-```
+{% highlight shell %}
+~$ sudo -u postgres createdb -O my_user db_test
+{% endhighlight %}
 
 Entre no postgres com o superusuário:
 
-```bash
-$ psql --username=postgres --password
-```
+{% highlight shell %}
+~$ psql --username=postgres --password
+{% endhighlight %}
 
 Dê permissão para um usuário específico acessar uma determinada base de dados:
 
-```bash
-# GRANT ALL PRIVILEGES ON DATABASE db_test TO my_user;
-# \q
-```
+{% highlight shell %}
+~# GRANT ALL PRIVILEGES ON DATABASE db_test TO my_user;
+~# \q
+{% endhighlight %}
 
 Entrar no postgres com o novo usuário:
 
-```bash
-$ psql --username=my_user --password
-```
+{% highlight shell %}
+~$ psql --username=my_user --password
+{% endhighlight %}
 
 ### Extra (Opcional)
 
@@ -119,18 +119,26 @@ $ psql --username=my_user --password
 Libere o acesso remoto pela rede ao PostgreSQL (não recomendado para uso em produção):<br>
 *substitua o 9.x pelo número de sua versão atual do PostgreSQL<br>
 
-```bash
-$ sudo nano /etc/postgresql/9.x/main/postgresql.conf
-```
-Alterar: <br>
-	de ```# listen_address = 'localhost'``` <br>
-	para ```listen_address = '*'```
+{% highlight shell %}
+~$ sudo nano /etc/postgresql/9.x/main/postgresql.conf
+{% endhighlight %}
 
-```bash
-$ sudo nano /etc/postgresql/9.x/main/pg_hba.conf
-```
+Alterar: <br>
+
+{% highlight plaintext %}
+de # listen_address = 'localhost'
+para listen_address = '*'
+{% endhighlight %}
+
+{% highlight shell %}
+~$ sudo nano /etc/postgresql/9.x/main/pg_hba.conf
+{% endhighlight %}
+
 Adicione a seguinte linha ao final do arquivo:<br>
-```host    all             all             0.0.0.0/0               md5```
+
+{% highlight plaintext %}
+host all all 0.0.0.0/0 md5
+{% endhighlight %}
 
 A forma mais correta de configurar o acesso externo ao banco de dados é configurar um proxy para acesso ao banco. Dessa maneira o acesso não ficará disponível abertamente na internet.
 
@@ -140,9 +148,9 @@ Para mais informações recomendo o seguintes links [01](https://www.postgresql.
 
 Instale o programa PgAdmin3 para gerenciar o banco de dados com uma interface gráfica:
 
-```bash
-$ sudo apt-get install pgadmin3 -y
-```
+{% highlight shell %}
+~$ sudo apt-get install pgadmin3 -y
+{% endhighlight %}
 
 Para mais informações acessem o [link](https://www.postgresql.org/ftp/pgadmin3/).
 

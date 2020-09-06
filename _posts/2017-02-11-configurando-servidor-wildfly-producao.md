@@ -28,129 +28,129 @@ Chega de conversa vamos iniciar o tutorial.
 
 Instale o Java (Caso já tenha, desconsidere esta etapa):
 
-``` bash
+{% highlight shell %}
 ~$ sudo add-apt-repository -y ppa:webupd8team/java \
 && sudo apt-get update \
 && sudo echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections \
 && sudo apt-get install oracle-java8-installer -y
-```
+{% endhighlight %}
 
 Faça o download do servidor Wildfly:
 
-``` bash
+{% highlight shell %}
 ~$ cd /opt
 ~$ sudo wget http://download.jboss.org/wildfly/10.0.0.Final/wildfly-10.0.0.Final.zip
 ~$ sudo unzip wildfly-10.0.0.Final.zip
 ~$ sudo rm -r wildfly-10.0.0.Final.zip
 ~$ sudo mv wildfly-10.0.0.Final/ wildfly/
-```
+{% endhighlight %}
 
 #### Configuração do Servidor Wildfly 10.x
 
-Crie um usuário e grupo para o Wildfly:
-
-```bash
+{% highlight shell %}
 ~$ sudo addgroup wildfly
 ~$ sudo useradd -g wildfly wildfly
-```
+{% endhighlight %}
 
 Mude o dono da pasta do Wildfly recursivamente:
 
-```bash
+{% highlight shell %}
 ~$ sudo chown -R wildfly:wildfly /opt/wildfly/
-```
+{% endhighlight %}
 
 Crie um link simbólico para o Wildfly:
 
-```bash
+{% highlight shell %}
 ~$ sudo ln -s wildfly /opt/wildfly
-```
+{% endhighlight %}
 
 Configure o init.d/ para o Wildfly:
 
-```bash
+{% highlight shell %}
 ~$ sudo cp /opt/wildfly/docs/contrib/scripts/init.d/wildfly-init-debian.sh /etc/init.d/wildfly
 ~$ sudo chown root:root /etc/init.d/wildfly
 ~$ sudo chmod ug+x /etc/init.d/wildfly
-```
+{% endhighlight %}
 
 Para dar start e stop no Wildfly pela primeira vez:
 
-```bash
+{% highlight shell %}
 ~$ sudo /etc/init.d/wildfly start
 ~$ sudo /etc/init.d/wildfly stop
-```
+{% endhighlight %}
 
 Atualize o Wildfly como serviço:
 
-```bash
+{% highlight shell %}
 ~$ sudo update-rc.d wildfly defaults
-```
+{% endhighlight %}
 
 #### Configurando acesso externo ao servidor
 
 Acesse o diretório:
 
-```bash
+{% highlight shell %}
 ~$ cd /opt/wildfly/standalone/configuration/
-```
+{% endhighlight %}
+
 Edite o arquivo de configuração:
 
-```bash
+{% highlight shell %}
 ~$ sudo nano standalone.xml
-```
+{% endhighlight %}
 
 Substitua as seguintes configurações:
 
-```xml
+{% highlight xml %}
 <interface name="public">
     <inet-address value="${jboss.bind.address:127.0.0.1}"/>
 </interface>
-```
+{% endhighlight %}
 
 por:
 
-```xml
+{% highlight xml %}
 <interface name="public">
     <any-address/>
 </interface>
-```
+{% endhighlight %}
 
 E a configuração de acesso ao painel de configurações do Wildfly:
 
-```xml
+{% highlight xml %}
 <interface name="management">
     <inet-address value="${jboss.bind.address:127.0.0.1}"/>
 </interface>
-```
+{% endhighlight %}
 
 por
 
-```xml
+{% highlight xml %}
 <interface name="management">
     <any-address/>
 </interface>
-```
+{% endhighlight %}
 
 #### Configurando usuário administrador
 
-Primeiramente vamos dar um stop no Wildfly:
+Primeiramente finalize o processo do Wildfly:
 
-```bash
+{% highlight shell %}
 ~$ sudo service wildfly stop
-```
+{% endhighlight %}
 
-Vamos acessar o diretório:
+Acesse o diretório:
 
-```bash
+{% highlight shell %}
 ~$ cd /opt/wildfly/bin
-```
+{% endhighlight %}
 
 Execute o script para adicionar um novo usuário:
 
-```bash
+{% highlight shell %}
 ~$ sudo ./add-user.sh
-```
+{% endhighlight %}
+
 Faça as seguintes instruções:
 
 1. Digite (a) para Management User
@@ -164,15 +164,15 @@ Digite (admin) para Username
 
 Inicie o Wildfly novamente:
 
-```bash
+{% highlight shell %}
 ~$ sudo service wildfly start
-```
+{% endhighlight %}
 
 Acesse o IP da máquina :8080 para conferir o acesso ao painel de configuração do Wildfly:
 
-```
+{% highlight shell %}
 http://localhost:9990 ou http://IP_EXTERNO:9990
-```
+{% endhighlight %}
 
 #### Considerações Finais
 

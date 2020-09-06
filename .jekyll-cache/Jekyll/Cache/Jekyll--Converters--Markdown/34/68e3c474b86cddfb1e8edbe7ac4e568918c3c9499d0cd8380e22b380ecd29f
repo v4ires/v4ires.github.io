@@ -1,0 +1,204 @@
+I"_4<h2 id="comandos-básicos-do-apache-hadoop-28x">Comandos básicos do Apache Hadoop 2.8.x</h2>
+
+<h4 id="requisitos-iniciais">Requisitos iniciais:</h4>
+
+<ul>
+  <li>1) Tenha o Apache Hadoop configurado em modo <em><a href="/config-hadoop-single-node/" target="_blank">single node</a></em> ou <em><a href="/config-hadoop-multi-node/" target="_blank">multi node</a></em></li>
+</ul>
+
+<p>*ps: Este tutorial foi testado com o sistema operacional Ubuntu 16.04 e 14.04. Caso deseje configurar em uma versão mais antiga, recente ou em outro SO, pequenas mudanças podem ocorrer nos procedimentos apresentados.</p>
+
+<h3 id="tldr">TL;DR</h3>
+
+<p>O projeto Apache Hadoop é um <em>software</em> de código aberto mantido pela Apache Foundation que tem como propósito fornecer uma implementação de código aberto do modelo de programação <em>MapReduce</em> de forma confiável e escalável. O Hadoop é projetado para ampliar o processamento de um único servidor em milhares de máquinas, onde cada uma das máquinas oferecem poder de processamento e armazenamento local. Esta ferramenta é utilizada para processamento em <em>batch</em> de grandes volumes de dados (<em>Big Data</em>). Atualmente, o Apache Hadoop é uma das ferramentas mais conhecidas para processamento distribuído, mas existem outras ferramentas similares que se integram ao Hadoop, como o <strong>Apache Spark</strong>, <strong>Apache Storm</strong> e dentre outros.</p>
+
+<p>*ps: para mais informações a respeito do Apache Hadoop acessem o site <a href="http://hadoop.apache.org/">http://hadoop.apache.org/</a></p>
+
+<h3 id="lets-get-started">Let’s get started</h3>
+
+<p>Neste tutorial você irá aprender a utilizar alguns comandos básicos do Apache Hadoop. Além disso, será mostrado como gerenciar arquivos no sistema de arquivos <em>Hadoop Distributed File System</em> (HDFS).</p>
+
+<p style="text-align: center;">
+  <img src="/assets/images/trash-pc.gif" style="width: 50%;" />
+</p>
+
+<h3 id="hadoop-scripts-tools">Hadoop Scripts Tools</h3>
+
+<p>O Apache Hadoop fornece por padrão alguns <em>scripts</em> para o gerenciamento das instâncias da ferramenta. O diretório padrão onde se encontram os <em>scripts</em> é o <code class="language-html highlighter-rouge">hadoop/sbin</code>.</p>
+
+<p>Observa-se que na pasta <code class="language-html highlighter-rouge">hadoop/sbin</code> encontra-se os seguintes <em>scripts</em> que inclui sua versão para sistemas <em>bash</em> (Linux e MacOS) como também para o <em>prompt</em> de comando do sistema operacional MS Windows.</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">distribute-exclude.sh    start-all.cmd        stop-balancer.sh
+hadoop-daemon.sh         start-all.sh         stop-dfs.cmd
+hadoop-daemons.sh        start-balancer.sh    stop-dfs.sh
+hdfs-config.cmd          start-dfs.cmd        stop-secure-dns.sh
+hdfs-config.sh           start-dfs.sh         stop-yarn.cmd
+httpfs.sh                start-secure-dns.sh  stop-yarn.sh
+kms.sh                   start-yarn.cmd       yarn-daemon.sh
+mr-jobhistory-daemon.sh  start-yarn.sh        yarn-daemons.sh
+refresh-namenodes.sh     stop-all.cmd
+slaves.sh                stop-all.sh</code></pre></figure>
+
+<p>Por comodidade é mais prático configurarmos este diretório no arquivo <code class="language-html highlighter-rouge">~/.bashrc</code> ou no <code class="language-html highlighter-rouge">/etc/profile</code>. Para isso devemos especificar o caminho <code class="language-html highlighter-rouge">hadoop/sbin</code> no <em>Path</em> do sistema, adicionando o seguinte comando.</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nb">export </span><span class="nv">HADOOP_INSTALL</span><span class="o">=</span>/opt/hadoop
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HADOOP_INSTALL</span>/sbin</code></pre></figure>
+
+<p>Os comandos básicos mais utilizados é o de iniciar o sistema de arquivos HDFS e do Hadoop YARN. Como por exemplo:</p>
+
+<ul>
+  <li>Iniciar o sistema de arquivos distribuído HDFS</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">~<span class="nv">$ </span>start-dfs.sh</code></pre></figure>
+
+<ul>
+  <li>Iniciar o Hadoop Yarn</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">~<span class="nv">$ </span>start-yarn.sh</code></pre></figure>
+
+<ul>
+  <li>Finalizar os processos do sistema de arquivos HDFS</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">~<span class="nv">$ </span> stop-dfs.sh</code></pre></figure>
+
+<ul>
+  <li>Finalizar os processos o Hadoop Yarn</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">~<span class="nv">$ </span>stop-yarn.sh</code></pre></figure>
+
+<p>Existem alguns <em>scripts deprecated</em> neste diretório, mas que ainda funcionam perfeitamente com o Hadoop:</p>
+
+<ul>
+  <li>Inicia todos os processos relacionados com Hadoop e o HDFS</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">~<span class="nv">$ </span>start-all.sh</code></pre></figure>
+
+<ul>
+  <li>Finaliza todos os processos relacionados com Hadoop e o HDFS</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">~<span class="nv">$ </span>stop-all.sh</code></pre></figure>
+
+<h3 id="comandos-básicos-do-apache-hadoop">Comandos Básicos do Apache Hadoop</h3>
+
+<p>O Apache Hadoop fornece alguns arquivos binários onde podem ser realizadas algumas operações importantes. O diretório padrão onde se encontra os binários é o <code class="language-html highlighter-rouge">hadoop/bin</code>, nele você encontra os seguintes binários:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">container-executor  hdfs      mapred.cmd               yarn
+hadoop              hdfs.cmd  rcc                      yarn.cmd
+hadoop.cmd          mapred    test-container-executor</code></pre></figure>
+
+<p>Por comodidade é mais prático configurarmos este diretório no arquivo <code class="language-html highlighter-rouge">~/.bashrc</code> ou no <code class="language-html highlighter-rouge">/etc/profile</code>. Para isso devemos especificar o caminho <code class="language-html highlighter-rouge">hadoop/bin</code> no <em>Path</em> do sistema, adicionando o seguinte comando.</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="nb">export </span><span class="nv">HADOOP_INSTALL</span><span class="o">=</span>/opt/hadoop
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HADOOP_INSTALL</span>/bin</code></pre></figure>
+
+<p>*ps: Não se esqueça de atualizar as variáveis de ambiente com o comando <code class="language-html highlighter-rouge">source ~/.bashrc</code> our <code class="language-html highlighter-rouge">/etc/profile</code></p>
+
+<p>O comando mais utilizado é o HDFS, com ele é possível executar as rotinas <em>MapReduce</em>. Para executar um código <em>MapReduce</em> basta executar o seguinte comando:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">~<span class="nv">$ </span>hadoop jar WordCount.jar WordCount /input /output</code></pre></figure>
+
+<p>Com o comando HDFS também é possível gerenciar os arquivos que estão no sistema de arquivos do Hadoop. A seguir e demonstrado alguns exemplos básicos de comando básicos no sistema de arquivos HDFS, note que todos os comando apresentados se assemelham ao comandos do <em>bash</em>.</p>
+
+<p>*ps: Todos os comando iniciam com o prefixo <code class="language-html highlighter-rouge">hdfs dfs</code>, mas existe também a possibilidade de utilizar o comando depreciado <code class="language-html highlighter-rouge">hadoop fs</code>.</p>
+
+<p>Criar um diretório:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c">#Comando</span>
+hdfs dfs <span class="nt">-mkdir</span> &lt;paths&gt;
+<span class="c">#Exemplo</span>
+~<span class="nv">$ </span>hdfs dfs <span class="nt">-mkdir</span> /user/hduser/input</code></pre></figure>
+
+<p>Listar diretórios:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c">#Comando</span>
+hdfs dfs <span class="nt">-ls</span> &lt;args&gt;
+<span class="c">#Exemplo</span>
+~<span class="nv">$ </span>hdfs dfs <span class="nt">-ls</span> /user</code></pre></figure>
+
+<p>Fazer <em>upload</em> de um arquivo:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c">#Comando</span>
+hdfs dfs <span class="nt">-put</span> &lt;file_path&gt; &lt;hdfs_path&gt;
+<span class="c">#Exemplo</span>
+~<span class="nv">$ </span>hdfs dfs <span class="nt">-put</span> my_file.txt /user/hduser/input</code></pre></figure>
+
+<p>Fazer <em>download</em> de um arquivo:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c">#Comando</span>
+hdfs dfs <span class="nt">-get</span> &lt;hdfs_path&gt; &lt;local_path&gt;
+<span class="c">#Exemplo</span>
+~<span class="nv">$ </span>hdfs dfs <span class="nt">-get</span> /user/hduser/input/my_file.txt ~/</code></pre></figure>
+
+<p>Remover um arquivo:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c">#Comando</span>
+hdfs dfs <span class="nt">-r</span> &lt;file_name&gt;  
+<span class="c">#Exemplo</span>
+~<span class="nv">$ </span>hdfs dfs <span class="nt">-r</span> /user/hduser/input/my_file.txt</code></pre></figure>
+
+<p>Remover um diretório:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c">#Comando</span>
+hdfs dfs <span class="nt">-rmr</span> &lt;hdfs_path&gt;
+<span class="c">#Exemplo</span>
+~<span class="nv">$ </span>hdfs dfs <span class="nt">-rmr</span> /user/hduser/input</code></pre></figure>
+
+<p>Renomear um arquivo:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c">#Comando</span>
+hdfs dfs <span class="nt">-mv</span> &lt;file_name&gt; &lt;file_name&gt;
+<span class="c">#Exemplo</span>
+~<span class="nv">$ </span>hdfs dfs <span class="nt">-mv</span> /user/hduser/input/my_file.txt /user/hduser/input/file.txt</code></pre></figure>
+
+<p>Mover um arquivo:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c">#Comando</span>
+hdfs dfs <span class="nt">-mv</span> &lt;hdfs_src&gt; &lt;hdfs_dest&gt;
+<span class="c">#Exemplo</span>
+~<span class="nv">$ </span>hdfs dfs <span class="nt">-mv</span> /user/hduser/input/my_file.txt /user/hduser</code></pre></figure>
+
+<p>Mover um diretório:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c">#Comando</span>
+hdfs dfs <span class="nt">-mv</span> &lt;hdfs_dir&gt; &lt;hdfs_dir&gt;
+<span class="c">#Exemplo</span>
+~<span class="nv">$ </span>hdfs dfs <span class="nt">-mv</span> /user/hduser/input /user</code></pre></figure>
+
+<p>Mostrar o tamanho do arquivo em <em>bytes</em>:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c">#Comando</span>
+hdfs dfs <span class="nt">-du</span> &lt;file or directory&gt;
+<span class="c">#Exemplo</span>
+~<span class="nv">$ </span>hdfs dfs <span class="nt">-du</span> /user/hduser/input/my_file.txt
+~<span class="nv">$ </span>hdfs dfs <span class="nt">-du</span> /user/hduser/input/</code></pre></figure>
+
+<p>Visualizar o conteúdo de um arquivo:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="c">#Comando</span>
+hdfs dfs <span class="nt">-cat</span> &lt;file&gt;
+<span class="c">#Exemplo</span>
+~<span class="nv">$ </span>hdfs dfs <span class="nt">-cat</span> /user/hduser/input/my_file.txt</code></pre></figure>
+
+<p>Agora você aprendeu alguns comandos básicos do Hadoop. Agora você já pode gerenciar arquivos no HDFS e aplicar algumas operações básicas :)</p>
+
+<p style="text-align: center;">
+  <img src="/assets/images/coding-awesome.gif" style="width: 60%;" />
+</p>
+
+<h2 id="disclaimer">Disclaimer</h2>
+
+<p>Material desenvolvido durante o meu Mestrado no Instituto de Ciências Matemáticas e de Computação da Universidade de São Paulo (<a href="http://icmc.usp.br/" target="_blank">ICMC-USP</a>). Além disso, faço um agradecimento em especial ao Laboratório de Sistemas Distribuídos e Programação Concorrente (<a href="http://lasdpc.icmc.usp.br/" target="_blank">LaSDPC</a>), o qual faço parte que me permitiu a criação deste material. Por fim, informo que é permitido livremente a reprodução integral deste material desde que sejam feitas as devidas referências ao autor ;)</p>
+
+<h2 id="referências">Referências</h2>
+
+<p>[1] Apache Foundation. Hadoop: <strong>Apache Hadoop</strong>. Acessado em Agosto de 2016. Disponível em: <a href="http://hadoop.apache.org">http://hadoop.apache.org</a>
+Dzone</p>
+
+<p>[2] Dzone/Big Data Zone. <strong><em>Top 10 Hadoop Shell Commands to Manage HDFS</em></strong>. Acessado em Outubro de 2016. Disponível em <a href="https://dzone.com/articles/top-10-hadoop-shell-commands">https://dzone.com/articles/top-10-hadoop-shell-commands</a></p>
+:ET

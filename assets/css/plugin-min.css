@@ -805,7 +805,7 @@ input[type=range]+.thumb{-webkit-touch-callout:none;-webkit-user-select:none;-kh
 .center-block{display:block;margin-left:auto;margin-right:auto}
 .truncate{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .no-padding{padding:0 !important}
-@font-face{font-family:"Material-Design-Icons";src:url("../font/material-design-icons/Material-Design-Icons.eot?#iefix") format("embedded-opentype"), url("../font/material-design-icons/Material-Design-Icons.woff2") format("woff2"), url("../font/material-design-icons/Material-Design-Icons.woff") format("woff"), url("../font/material-design-icons/Material-Design-Icons.ttf") format("truetype"), url("../font/material-design-icons/Material-Design-Icons.svg#Material-Design-Icons") format("svg");font-weight:normal;font-style:normal;}
+@font-face{font-family:"Material-Design-Icons";src:url("../fonts/material-design-icons/Material-Design-Icons.eot?#iefix") format("embedded-opentype"), url("../fonts/material-design-icons/Material-Design-Icons.woff2") format("woff2"), url("../fonts/material-design-icons/Material-Design-Icons.woff") format("woff"), url("../fonts/material-design-icons/Material-Design-Icons.ttf") format("truetype"), url("../fonts/material-design-icons/Material-Design-Icons.svg#Material-Design-Icons") format("svg");font-weight:normal;font-style:normal;}
 [class^="mdi-"],
 [class*="mdi-"]{speak:none;display:inline-block;font-family:"Material-Design-Icons";font-style:normal;font-weight:normal;font-variant:normal;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;transform:translate(0, 0)}
 [class^="mdi-"]:before,
@@ -1773,11 +1773,11 @@ nav a.button-collapse,
 nav a.button-collapse i{height:64px;line-height:64px}
 .navbar-fixed{height:64px}
 }
-@font-face{font-family:"Roboto";src:local(Roboto Thin), url("../font/roboto/Roboto-Thin.woff2") format("woff2"), url("../font/roboto/Roboto-Thin.woff") format("woff"), url("../font/roboto/Roboto-Thin.ttf") format("truetype");font-weight:200;}
-@font-face{font-family:"Roboto";src:local(Roboto Light), url("../font/roboto/Roboto-Light.woff2") format("woff2"), url("../font/roboto/Roboto-Light.woff") format("woff"), url("../font/roboto/Roboto-Light.ttf") format("truetype");font-weight:300;}
-@font-face{font-family:"Roboto";src:local(Roboto Regular), url("../font/roboto/Roboto-Regular.woff2") format("woff2"), url("../font/roboto/Roboto-Regular.woff") format("woff"), url("../font/roboto/Roboto-Regular.ttf") format("truetype");font-weight:400;}
-@font-face{font-family:"Roboto";src:url("../font/roboto/Roboto-Medium.woff2") format("woff2"), url("../font/roboto/Roboto-Medium.woff") format("woff"), url("../font/roboto/Roboto-Medium.ttf") format("truetype");font-weight:500;}
-@font-face{font-family:"Roboto";src:url("../font/roboto/Roboto-Bold.woff2") format("woff2"), url("../font/roboto/Roboto-Bold.woff") format("woff"), url("../font/roboto/Roboto-Bold.ttf") format("truetype");font-weight:700;}
+@font-face{font-family:"Roboto";src:local(Roboto Thin), url("../fonts/roboto/Roboto-Thin.woff2") format("woff2"), url("../fonts/roboto/Roboto-Thin.woff") format("woff"), url("../fonts/roboto/Roboto-Thin.ttf") format("truetype");font-weight:200;}
+@font-face{font-family:"Roboto";src:local(Roboto Light), url("../fonts/roboto/Roboto-Light.woff2") format("woff2"), url("../fonts/roboto/Roboto-Light.woff") format("woff"), url("../fonts/roboto/Roboto-Light.ttf") format("truetype");font-weight:300;}
+@font-face{font-family:"Roboto";src:local(Roboto Regular), url("../fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("../fonts/roboto/Roboto-Regular.woff") format("woff"), url("../fonts/roboto/Roboto-Regular.ttf") format("truetype");font-weight:400;}
+@font-face{font-family:"Roboto";src:url("../fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("../fonts/roboto/Roboto-Medium.woff") format("woff"), url("../fonts/roboto/Roboto-Medium.ttf") format("truetype");font-weight:500;}
+@font-face{font-family:"Roboto";src:url("../fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/roboto/Roboto-Bold.woff") format("woff"), url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");font-weight:700;}
 a{text-decoration:none}
 html{line-height:1.5;font-family:"Roboto", sans-serif;font-weight:normal;color:rgba(0, 0, 0, 0.87)}
 @media only screen and (min-width:0){html{font-size:14px;}

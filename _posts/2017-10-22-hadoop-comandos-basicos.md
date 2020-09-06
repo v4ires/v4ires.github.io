@@ -33,11 +33,11 @@ Neste tutorial você irá aprender a utilizar alguns comandos básicos do Apache
 
 ### Hadoop Scripts Tools
 
-O Apache Hadoop fornece por padrão alguns *scripts* para o gerenciamento das instâncias da ferramenta. O diretório padrão onde se encontram os *scripts* é o ```bash hadoop/sbin```.
+O Apache Hadoop fornece por padrão alguns *scripts* para o gerenciamento das instâncias da ferramenta. O diretório padrão onde se encontram os *scripts* é o ```hadoop/sbin```.
 
-Observa-se que na pasta ```bash hadoop/sbin``` encontra-se os seguintes *scripts* que inclui sua versão para sistemas *bash* (Linux e MacOS) como também para o *prompt* de comando do sistema operacional MS Windows.
+Observa-se que na pasta ```hadoop/sbin``` encontra-se os seguintes *scripts* que inclui sua versão para sistemas *bash* (Linux e MacOS) como também para o *prompt* de comando do sistema operacional MS Windows.
 
-```bash
+{% highlight shell %}
 distribute-exclude.sh    start-all.cmd        stop-balancer.sh
 hadoop-daemon.sh         start-all.sh         stop-dfs.cmd
 hadoop-daemons.sh        start-balancer.sh    stop-dfs.sh
@@ -48,183 +48,183 @@ kms.sh                   start-yarn.cmd       yarn-daemon.sh
 mr-jobhistory-daemon.sh  start-yarn.sh        yarn-daemons.sh
 refresh-namenodes.sh     stop-all.cmd
 slaves.sh                stop-all.sh
-```
+{% endhighlight %}
 
-Por comodidade é mais prático configurarmos este diretório no arquivo ```bash ~/.bashrc``` ou no ```bash /etc/profile ```. Para isso devemos especificar o caminho ```bash hadoop/sbin``` no *Path* do sistema, adicionando o seguinte comando.
+Por comodidade é mais prático configurarmos este diretório no arquivo ```~/.bashrc``` ou no ```/etc/profile```. Para isso devemos especificar o caminho ```hadoop/sbin``` no *Path* do sistema, adicionando o seguinte comando.
 
-```bash
+{% highlight shell %}
 export HADOOP_INSTALL=/opt/hadoop
 export PATH=$PATH:$HADOOP_INSTALL/sbin
-```
+{% endhighlight %}
 
 Os comandos básicos mais utilizados é o de iniciar o sistema de arquivos HDFS e do Hadoop YARN. Como por exemplo:
 
 * Iniciar o sistema de arquivos distribuído HDFS
 
-```bash
+{% highlight shell %}
 ~$ start-dfs.sh
-```
+{% endhighlight %}
 
 * Iniciar o Hadoop Yarn
 
-```bash
+{% highlight shell %}
 ~$ start-yarn.sh
-```
+{% endhighlight %}
 
 * Finalizar os processos do sistema de arquivos HDFS
 
-```bash
+{% highlight shell %}
 ~$  stop-dfs.sh
-```
+{% endhighlight %}
 
 * Finalizar os processos o Hadoop Yarn
 
-```bash
+{% highlight shell %}
 ~$ stop-yarn.sh
-```
+{% endhighlight %}
 
 Existem alguns *scripts deprecated* neste diretório, mas que ainda funcionam perfeitamente com o Hadoop:
 
 * Inicia todos os processos relacionados com Hadoop e o HDFS
 
-```bash
+{% highlight shell %}
 ~$ start-all.sh
-```
+{% endhighlight %}
 
 * Finaliza todos os processos relacionados com Hadoop e o HDFS
 
-```bash
+{% highlight shell %}
 ~$ stop-all.sh
-```
+{% endhighlight %}
 
 ### Comandos Básicos do Apache Hadoop
 
-O Apache Hadoop fornece alguns arquivos binários onde podem ser realizadas algumas operações importantes. O diretório padrão onde se encontra os binários é o ```bash hadoop/bin```, nele você encontra os seguintes binários:
+O Apache Hadoop fornece alguns arquivos binários onde podem ser realizadas algumas operações importantes. O diretório padrão onde se encontra os binários é o ```hadoop/bin```, nele você encontra os seguintes binários:
 
-```bash
+{% highlight shell %}
 container-executor  hdfs      mapred.cmd               yarn
 hadoop              hdfs.cmd  rcc                      yarn.cmd
 hadoop.cmd          mapred    test-container-executor
-```
+{% endhighlight %}
 
-Por comodidade é mais prático configurarmos este diretório no arquivo ```bash ~/.bashrc``` ou no ```bash /etc/profile ```. Para isso devemos especificar o caminho ```bash hadoop/bin``` no *Path* do sistema, adicionando o seguinte comando.
+Por comodidade é mais prático configurarmos este diretório no arquivo ```~/.bashrc``` ou no ```/etc/profile ```. Para isso devemos especificar o caminho ```hadoop/bin``` no *Path* do sistema, adicionando o seguinte comando.
 
-```bash
+{% highlight shell %}
 export HADOOP_INSTALL=/opt/hadoop
 export PATH=$PATH:$HADOOP_INSTALL/bin
-```
+{% endhighlight %}
 
-*ps: Não se esqueça de atualizar as variáveis de ambiente com o comando ```bash source ~/.bashrc``` our ```bash /etc/profile```
+*ps: Não se esqueça de atualizar as variáveis de ambiente com o comando ```source ~/.bashrc``` our ```/etc/profile```
 
 O comando mais utilizado é o HDFS, com ele é possível executar as rotinas *MapReduce*. Para executar um código *MapReduce* basta executar o seguinte comando:
 
-```bash
+{% highlight shell %}
 ~$ hadoop jar WordCount.jar WordCount /input /output
-```
+{% endhighlight %}
 
 Com o comando HDFS também é possível gerenciar os arquivos que estão no sistema de arquivos do Hadoop. A seguir e demonstrado alguns exemplos básicos de comando básicos no sistema de arquivos HDFS, note que todos os comando apresentados se assemelham ao comandos do *bash*.
 
-*ps: Todos os comando iniciam com o prefixo ```bash hdfs dfs```, mas existe também a possibilidade de utilizar o comando depreciado ```bash hadoop fs```.
+*ps: Todos os comando iniciam com o prefixo ```hdfs dfs```, mas existe também a possibilidade de utilizar o comando depreciado ```hadoop fs```.
 
 Criar um diretório:
 
-```bash
+{% highlight shell %}
 #Comando
 hdfs dfs -mkdir <paths>
 #Exemplo
 ~$ hdfs dfs -mkdir /user/hduser/input
-```
+{% endhighlight %}
 
 Listar diretórios:
 
-```bash
+{% highlight shell %}
 #Comando
 hdfs dfs -ls <args>
 #Exemplo
 ~$ hdfs dfs -ls /user
-```
+{% endhighlight %}
 
 Fazer *upload* de um arquivo:
 
-```bash
+{% highlight shell %}
 #Comando
 hdfs dfs -put <file_path> <hdfs_path>
 #Exemplo
 ~$ hdfs dfs -put my_file.txt /user/hduser/input
-```
+{% endhighlight %}
 
 Fazer *download* de um arquivo:
 
-```bash
+{% highlight shell %}
 #Comando
 hdfs dfs -get <hdfs_path> <local_path>
 #Exemplo
 ~$ hdfs dfs -get /user/hduser/input/my_file.txt ~/
-```
+{% endhighlight %}
 
 Remover um arquivo:
 
-```bash
+{% highlight shell %}
 #Comando
 hdfs dfs -r <file_name>  
 #Exemplo
 ~$ hdfs dfs -r /user/hduser/input/my_file.txt
-```
+{% endhighlight %}
 
 Remover um diretório:
 
-```bash
+{% highlight shell %}
 #Comando
 hdfs dfs -rmr <hdfs_path>
 #Exemplo
 ~$ hdfs dfs -rmr /user/hduser/input
-```
+{% endhighlight %}
 
 Renomear um arquivo:
 
-```bash
+{% highlight shell %}
 #Comando
 hdfs dfs -mv <file_name> <file_name>
 #Exemplo
 ~$ hdfs dfs -mv /user/hduser/input/my_file.txt /user/hduser/input/file.txt
-```
+{% endhighlight %}
 
 Mover um arquivo:
 
-```bash
+{% highlight shell %}
 #Comando
 hdfs dfs -mv <hdfs_src> <hdfs_dest>
 #Exemplo
 ~$ hdfs dfs -mv /user/hduser/input/my_file.txt /user/hduser
-```
+{% endhighlight %}
 
 Mover um diretório:
 
-```bash
+{% highlight shell %}
 #Comando
 hdfs dfs -mv <hdfs_dir> <hdfs_dir>
 #Exemplo
 ~$ hdfs dfs -mv /user/hduser/input /user
-```
+{% endhighlight %}
 
 Mostrar o tamanho do arquivo em *bytes*:
 
-```bash
+{% highlight shell %}
 #Comando
 hdfs dfs -du <file or directory>
 #Exemplo
 ~$ hdfs dfs -du /user/hduser/input/my_file.txt
 ~$ hdfs dfs -du /user/hduser/input/
-```
+{% endhighlight %}
 
 Visualizar o conteúdo de um arquivo:
 
-```bash
+{% highlight shell %}
 #Comando
 hdfs dfs -cat <file>
 #Exemplo
 ~$ hdfs dfs -cat /user/hduser/input/my_file.txt
-```
+{% endhighlight %}
 
 Agora você aprendeu alguns comandos básicos do Hadoop. Agora você já pode gerenciar arquivos no HDFS e aplicar algumas operações básicas :)
 

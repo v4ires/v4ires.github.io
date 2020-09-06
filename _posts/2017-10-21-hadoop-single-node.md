@@ -38,99 +38,99 @@ Neste tutorial você irá aprender a configurar o Apache Hadoop no modo *Single 
 
 Instale o Java 8 com o seguinte comando:
 
-```bash
+{% highlight shell %}
 ~# apt-get install openjdk-8-jdk
-```
+{% endhighlight %}
 
 Verifique a instalação do Java:
 
-```bash
+{% highlight shell %}
 ~# java -version
-```
+{% endhighlight %}
 
 Adicionar o JAVA_HOME na variável PATH:
 
-```bash
+{% highlight shell %}
 ~# vim /etc/environments
-```
+{% endhighlight %}
 
 Adicionar ao final do arquivo a variável JAVA_HOME:
 
-```bash
+{% highlight shell %}
 ~# JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
-```
+{% endhighlight %}
 
 Atualize os índices da variável de ambiente:
 
-```bash
+{% highlight shell %}
 ~# source /etc/environment
-```
+{% endhighlight %}
 
 Verifique se o Path está correto:
 
-```bash
+{% highlight shell %}
 ~# echo $JAVA_HOME
-```
+{% endhighlight %}
 
 ### Instale e Configure o Servidor SSH (Sem Senha)
 
 Caso não tenha instalado o ssh, instale o servidor ssh com o seguinte comando:
 
-```bash
+{% highlight shell %}
 ~# apt-get install ssh
-```
+{% endhighlight %}
 
 Verifique se a máquina tem acesso a ssh sem senha no localhost:
 
-```bash
+{% highlight shell %}
 ~# ssh localhost
-```
+{% endhighlight %}
 
 Caso seja solicitado uma senha, faça o seguinte procedimento:
 
 Gere uma chave pública de acesso ao ssh
 
-```bash
+{% highlight shell %}
 ~# ssh-keygen -t rsa -P ""
-```
+{% endhighlight %}
 
-Agora com a chave gerada vamos adicionar ela ao diretório de chaves autorizadas:
+Agora com a chave gerada e adicione ela ao diretório de chaves autorizadas:
 
-```bash
+{% highlight shell %}
 ~# cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
-```
+{% endhighlight %}
 
 ### Configure o Apache Hadoop (Single Node)
 
 Faça o download do Apache Hadoop, neste caso a versão 2.8.1:
 
-```bash
+{% highlight shell %}
 ~# wget http://mirror.nbtelecom.com.br/apache/hadoop/common/hadoop-2.8.1/hadoop-2.8.1.tar.gz
-```
+{% endhighlight %}
 
 Descompacte o Apache Hadoop no diretório /opt:
 
-```bash
+{% highlight shell %}
 ~# tar -zxvf hadoop-2.8.1.tar.gz
-```
+{% endhighlight %}
 
-Agora vamos configurar as variáveis de ambiente:
+Agora configure as variáveis de ambiente:
 
-```bash
+{% highlight shell %}
 #caso você prefira que todos usuários do sistema tenham as variáveis de ambiente
 ~# vim /etc/profile 
-```
+{% endhighlight %}
 
 ou
 
-```bash
+{% highlight shell %}
 #caso você prefira que apenas o seu usuário tenham as variáveis de ambiente
 ~# vim ~/.bashrc 
-```
+{% endhighlight %}
 
 Adicione ao final do arquivo os seguintes variáveis de ambiente:
 
-```
+{% highlight shell %}
 #HADOOP VARIABLES START
 export JAVA_HOME=caminho_para_o_java_home
 export HADOOP_INSTALL=caminho_para_o_haddop
@@ -143,50 +143,50 @@ export YARN_HOME=$HADOOP_INSTALL
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_INSTALL/lib/native
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_INSTALL/lib"
 #HADOOP VARIABLES END
-```
+{% endhighlight %}
 
 OBS: Substitua ***caminho_para_o_java_home*** e ***caminho_para_o_hadoop*** pelos seus respectivos paths ;)
 
 Atualize os índices das variáveis de ambiente:
 
-```bash
+{% highlight shell %}
 ~# source ~/.bashrc
-```
+{% endhighlight %}
 
 ou
 
-```bash
+{% highlight shell %}
 ~# source /etc/profile
-```
+{% endhighlight %}
 
-Agora vamos editar o arquivo de variáveis de ambiente do Hadoop:
+Agora edite o arquivo de variáveis de ambiente do Hadoop:
 
-```bash
+{% highlight shell %}
 ~# vim hadoop-2.8.1/etc/hadoop/hadoop-env.sh
-```
+{% endhighlight %}
 
 Edite a variável de ambiente JAVA_HOME:
 
-```bash
+{% highlight shell %}
 ~# export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-```
+{% endhighlight %}
 
-Vamos criar o diretório onde será o ponto de montagem do sistemas de arquivos do Hadoop o HDFS:
+Crie o diretório onde será o ponto de montagem do sistemas de arquivos do Hadoop o HDFS:
 
-```bash
+{% highlight shell %}
 ~# mkdir -p ~/hadoop_store/hdfs/namenode
 ~# mkdir -p ~/hadoop_store/hdfs/datanode
-```
+{% endhighlight %}
 
-Vamos configurar o arquivo hdfs-site.xml com o caminho das pastas criadas:
+Configure o arquivo hdfs-site.xml com o caminho das pastas criadas:
 
-```bash
+{% highlight shell %}
 ~# vim hadoop-2.8.1/etc/hadoop/hdfs-site.xml
-```
+{% endhighlight %}
 
 Adicione as seguintes propriedades:
 
-```xml
+{% highlight xml %}
 <property>
   <name>dfs.replication</name>
   <value>1</value>
@@ -194,41 +194,43 @@ Adicione as seguintes propriedades:
   The actual number of replications can be specified when the file is created.
   The default is used if replication is not specified in create time.
   </description>
- </property>
- <property>
-   <name>dfs.namenode.name.dir</name>
+</property>
+
+<property>
+  <name>dfs.namenode.name.dir</name>
   <value>file:######NAMENODE_FOLDER_PATH######</value>
- </property>
- <property>
-   <name>dfs.datanode.data.dir</name>
-   <value>file:######DATANODE_FOLDER_PATH######</value>
- </property>
-```
+</property>
+
+<property>
+  <name>dfs.datanode.data.dir</name>
+  <value>file:######DATANODE_FOLDER_PATH######</value>
+</property>
+{% endhighlight %}
 
 *ps: a tag ```</property>``` deve ficar dentro de uma tag ```<configuration></configuration>```
 
 Crie um diretório temporário na pasta de instalação do Hadoop:
 
-```bash
+{% highlight shell %}
 ~# mkdir -p ~/hadoop_store/hdfs/tmp
-```
+{% endhighlight %}
 
-Vamos configurar o arquivo core-site.xml
+Configure o arquivo core-site.xml
 
-```bash
+{% highlight shell %}
 ~# vim hadoop-2.8.1/etc/hadoop/core-site.xml
-```
+{% endhighlight %}
 
 Adicione as seguintes propriedades
 
-```xml
+{% highlight xml %}
 <property>
   <name>hadoop.tmp.dir</name>
   <value>######TMP_FOLDER_PATH######</value>
   <description>A base for other temporary directories.</description>
- </property>
+</property>
 
- <property>
+<property>
   <name>fs.default.name</name>
   <value>hdfs://localhost:54310</value>
   <description>The name of the default file system.  A URI whose
@@ -236,20 +238,20 @@ Adicione as seguintes propriedades
   uri's scheme determines the config property (fs.SCHEME.impl) naming
   the FileSystem implementation class.  The uri's authority is used to
   determine the host, port, etc. for a filesystem.</description>
- </property>
- ```
+</property>
+{% endhighlight %}
  
 *ps: a tag ```</property>``` deve ficar dentro de uma tag ```<configuration></configuration>```
 
 Configure o arquivo mapred-site.xml:
 
-```bash
+{% highlight shell %}
 ~# cp hadoop-2.8.1/etc/hadoop/mapred-site.xml.template hadoop-2.8.1/etc/hadoop/mapred-site.xml
-```
+{% endhighlight %}
 
 Adicione a seguinte propriedade:
 
-```xml
+{% highlight xml %}
 <property>
   <name>mapred.job.tracker</name>
   <value>localhost:54311</value>
@@ -257,67 +259,67 @@ Adicione a seguinte propriedade:
   at.  If "local", then jobs are run in-process as a single map
   and reduce task.
   </description>
- </property>
-```
+</property>
+{% endhighlight %}
 
 *ps: a tag ```</property>``` deve ficar dentro de uma tag ```<configuration></configuration>```
 
 Configure o arquivo o arquivo yarn-site.xml:
 
-```bash
+{% highlight shell %}
 ~# vim yarn-site.xml
-```
+{% endhighlight %}
 
 Adicione as seguintes propriedades:
 
-```xml
-  <property>
-          <name>yarn.resourcemanager.hostname</name>
-          <value>frontend</value>
-          <description>The hostname of the RM.</description>
-  </property>
+{% highlight xml %}
+<property>
+  <name>yarn.resourcemanager.hostname</name>
+  <value>frontend</value>
+  <description>The hostname of the RM.</description>
+</property>
 
-  <property>
-           <name>yarn.nodemanager.aux-services</name>
-           <value>mapreduce_shuffle</value>
-  </property>
+<property>
+  <name>yarn.nodemanager.aux-services</name>
+  <value>mapreduce_shuffle</value>
+</property>
 
-  <property>
-           <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
-           <value>org.apache.hadoop.mapred.ShuffleHandler</value>
-  </property>
-```
+<property>
+  <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+  <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+</property>
+{% endhighlight %}
 
 *ps: a tag ```</property>``` deve ficar dentro de uma tag ```<configuration></configuration>```
 
 Formate o sistema de arquivos HDFS:
 
-```bash
+{% highlight shell %}
 ~# hadoop namenode -format
-```
+{% endhighlight %}
 
 Inicie os serviços do Hadoop:
 
-```bash
+{% highlight shell %}
 ~# start-dfs.sh && start-yarn.sh
-```
+{% endhighlight %}
 
 Verifique os processos do Hadoop:
 
-```bash
+{% highlight shell %}
 ~# jps
-```
+{% endhighlight %}
 
 O console deve aparecer uma saída semelhante a essa:
 
-```bash
+{% highlight shell %}
 9757 Jps
 8950 DataNode
 9145 SecondaryNameNode
 9438 NodeManager
 8799 NameNode
 9311 ResourceManager
-```
+{% endhighlight %}
 
 *Importante que apareça os processos ***DataNode***, ***SecondaryNameNode***, ***NodeManager***, ***NameNode*** e ***ResourceManager***.
 
@@ -329,36 +331,37 @@ Caso enfrente algum problema com relação ao tamanho do *heap* de memória da J
 
 Adicione esta linha no arquivo /etc/profile:
 
-```bash
+{% highlight shell %}
 export JVM_ARGS="-Xms1024m -Xmx1024m"
-```
+{% endhighlight %}
 
 Esta mudança muda o heap de memória do Java para 1024 mb. Por padrão é 128 mb.
 
-Agora vamos atualizar os índices do arquivo /etc/profile:
+Atualize os índices do arquivo /etc/profile:
 
-```bash
+{% highlight shell %}
 ~# source /etc/profile
-```
+{% endhighlight %}
 
 2ª Etapa:
 
 Adicione ou edite a seguinte variável de ambiente:
 
-```
+{% highlight shell %}
 ~# export HADOOP_CLIENT_OPTS="-Xmx1024m $HADOOP_CLIENT_OPTS"
-```
+{% endhighlight %}
 
 3ª Etapa:
 
 Adicione a seguinte propriedade ao arquivo mapred-site.xml:
 
-```xml
-  <property>
-    <name>mapred.child.java.opts</name>
-    <value>-Xmx1024m</value>
-  </property>
-```
+{% highlight xml %}
+<property>
+  <name>mapred.child.java.opts</name>
+  <value>-Xmx1024m</value>
+</property>
+{% endhighlight %}
+
 *ps: a tag ```</property>``` deve ficar dentro de uma tag ```<configuration></configuration>```
 
 Se tudo estiver ok, pronto temos o Apache Hadoop configurado em modo *Single Node* ;)<br>
