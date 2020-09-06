@@ -1,6 +1,6 @@
 # Meu website pessoal [![Build Status](https://travis-ci.org/v4ires/v4ires.github.io.svg?branch=master)](https://travis-ci.org/v4ires/v4ires.github.io)
 
-<p align="center"><img src="assets//images/website-sreenshot.png" /></p>
+<p align="center"><img src="assets/images/logo-social.png" width="50%" /></p>
 
 ## Como funciona?
 
@@ -14,33 +14,33 @@ Este projeto utiliza [Jekyll](http://jekyllrb.com/), que é um gerador de págin
 
 1. Instale o [Git](http://git-scm.com/downloads) e [Ruby](http://www.ruby-lang.org/pt/downloads/), se você ainda não tiver instalado.
 
-2. Primeiramente, fork o repositório em [viniciusaires.github.io](https://github.com/viniciusaires/viniciusaires.github.io).
+2. Primeiramente, fork o repositório em [v4ires.github.io](https://github.com/v4ires/v4ires.github.io).
 
 <p align="center"><img src="assets/images/fork.png" /></p>
 
 3. Após isso, abra um terminal e instale o [Jekyll](http://jekyllrb.com/) com o seguinte comando:
 
-  ```sh
-  $ gem install jekyll
-  ```
+```sh
+~$ gem install jekyll
+```
 
 4. Agora clone o projeto:
 
-  ```sh
-  $ git clone git@github.com:YOUR_USER_NAME/viniciusaires.github.io.git
-  ```
+```sh
+~$ git clone git@github.com:YOUR_USER_NAME/v4ires.github.io.git
+```
 
 5. Vá até a pasta do projeto:
 
-  ```sh
-  $ cd viniciusaires.github.io/
-  ```
+```sh
+~$ cd v4ires.github.io/
+```
 
 6. E finalmente execute:
 
-  ```sh
-  $ sh run.sh
-  ```
+```sh
+~$ sh run.sh
+```
 
 Você terá acesso ao site no endereço `localhost:4000` :smile:
 
@@ -55,7 +55,6 @@ IE 8+ ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
 A estrutura básica dos arquivos deste projeto é organizada da seguinte maneira:
 
 ```
-.
 |-- _includes
 |-- _layouts
 |-- _posts
@@ -66,44 +65,40 @@ A estrutura básica dos arquivos deste projeto é organizada da seguinte maneira
 `-- index.html
 ```
 
-### [_includes](https://github.com/maratonato/maratonato.github.io/tree/master/_includes)
+### [_includes](https://github.com/v4ires/v4ires.github.io/tree/master/_includes)
 
-São blocos de código usados para gerar a página principal do site ([index.html](https://github.com/maratonato/maratonato.github.io/blob/master/index.html)).
+São blocos de código usados para gerar a página principal do site ([index.html](https://github.com/v4ires/v4ires.github.io/blob/master/index.html)).
 
-### [_posts](https://github.com/maratonato/maratonato.github.io/tree/master/_posts)
+### [_posts](https://github.com/v4ires/v4ires.github.io/tree/master/_posts)
 
 Aqui você encontrará uma lista de arquivos para cada post.
 
-### [_layouts](https://github.com/maratonato/maratonato.github.io/tree/master/_layouts)
+### [_layouts](https://github.com/v4ires/v4ires.github.io/tree/master/_layouts)
 
 Aqui você encontrará o template padrão da aplicação
 
-### [_site](https://github.com/maratonato/maratonato.github.io/tree/master/_site)
+### [_site](https://github.com/v4ires/v4ires.github.io/tree/master/_site)
 
-Aqui você encontrará todos os arquivos estáticos gerados pelo jekyll após a sua execução. No entanto, este diretório é desnecessário neste projeto, portanto ele é ignorado em ([.gitignore](https://github.com/maratonato/maratonato.github.io/blob/master/.gitignore)).
+Aqui você encontrará todos os arquivos estáticos gerados pelo jekyll após a sua execução. No entanto, este diretório é desnecessário neste projeto, portanto ele é ignorado em ([.gitignore](https://github.com/v4ires/v4ires.github.io/blob/master/.gitignore)).
 
-### [_config.yml](https://github.com/maratonato/maratonato.github.io/blob/master/_config.yml)
+### [_config.yml](https://github.com/v4ires/v4ires.github.io/blob/master/_config.yml)
 
 Contém a maioria das configurações da aplicação.
 
-### [index.html](https://github.com/maratonato/maratonato.github.io/blob/master/index.html)
+### [index.html](https://github.com/v4ires/v4ires.github.io/blob/master/index.html)
 
 Contém todas as seções da aplicação.
 
-## Sincronizando seu fork
-
-Caso você já tenha feito fork a algum tempo você tem duas opções para garantir que estará trabalhando com as ultimas alterações, que pode ser simplesmente deletar seu fork e fazer um novo ou sincronizar seu fork com o repositório de origem usando as [instruções contidas na wiki](https://github.com/viniciusaires/viniciusaires.github.io/wiki/Sincronizando-seu-fork-com-o-projeto)
-
 ## Autor
 
-Este projeto foi idealizado por [@viniciusaires](https://www.github.com/viniciusaires)
+Este projeto foi idealizado por [@v4ires](https://www.github.com/v4ires)
 
-##Créditos
+## Créditos
 
-README inspirado nos repositórios do [@zenorocha](https://github.com/zenorocha) :+1.
+README inspirado nos repositórios do [@zenorocha](https://github.com/zenorocha) :+1:.
 
 ## Licença
 
-[MIT License](http://www.viniciusaires.me/mit) © Vinícius Aires Barros
+[MIT License](https://www.viniciusaires.dev/mit) © Vinícius Aires Barros
 
-Visite o site [http://viniciusaires.me](http://viniciusaires.me).
+Visite o site [https://www.viniciusaires.dev](https://www.viniciusaires.dev).
