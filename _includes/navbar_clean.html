@@ -1,14 +1,17 @@
-<div class="navbar-fixed">
-  <nav id="nav_f" class="default_color" role="navigation" style="height: 65px; background-color: #009688">
-    <div class="container">
-      <div class="nav-wrapper">
-        <a href="/" class="brand-logo" style="padding-top: 5px;"><img src="{{ site.baseurl }}{{ site.baseurl }}/assets/images/logo.svg" alt=""/></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#">Início</a></li>
-          <li><a href="/blog">Blog</a></li>
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-      </div>
-    </div>
-  </nav>
-</div>
+<nav style="height: 65px; background-color: #009688">
+  <div class="nav-wrapper">
+    <a href="/#" class="brand-logo">
+      <img src="{{ site.baseurl }}/assets/images/logo.svg" style="width: 100%;" />
+    </a>
+    <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="#">Início</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+  </div>
+</nav>
+
+<ul class="sidenav" id="mobile-nav">
+  <li><a href="#">Início</a></li>
+  <li><a href="/blog">Blog</a></li>
+</ul>

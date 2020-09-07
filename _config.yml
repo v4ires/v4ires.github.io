@@ -107,10 +107,6 @@ works:
     project_name: UFT Serviços
     description: Aplicativo Android para abertura e acompanhamento de chamados da UFT.
 
-  - background_image: https://viniciusaires.dev/assets/images/maratonato.svg
-    project_name: ACM ICPC at TO
-    description: Site da Maratona de Programação no Tocantins.
-
   - background_image: https://viniciusaires.dev/assets/images/dojoto.svg
     project_name: DojoTO
     description: Website do Coding Dojo TO.
