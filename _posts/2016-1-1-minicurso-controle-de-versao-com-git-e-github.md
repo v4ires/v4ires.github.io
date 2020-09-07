@@ -32,7 +32,7 @@ No geral o planejamento e execução do minicurso um grande aprendizado, pois fo
 Segue abaixo os slides apresentados no minicurso, por fins didáticos e de aprendizado utilizei a ferramenta de desenvolvimento de apresentações em HTML5, CSS e JS o [RevealJS](http://lab.hakim.se/reveal-js/). A apresentação está hospedada no [Github](https://github.com/viniciusaires/minicurso-controle-de-versao-com-git-github), lá vocês poderão acompanhar o histórico dos commit's e também contribuírem com o projeto <i class="em em---1"></i>
 
 <div class="myIframe">
-  <iframe src="http://v4ires.github.io/controle-de-versao-com-git-github-conceitos-basicos" frameborder="0" allowfullscreen></iframe>
+  <iframe src="https://viniciusaires.dev/controle-de-versao-com-git-github-conceitos-basicos" frameborder="0" allowfullscreen></iframe>
 </div>
 
-Acessem o <a href="http://viniciusaires.me/minicurso-controle-de-versao-com-git-github" target="_blank">link</a> para ver a apresentação em tela cheia <i class="em em-smile"></i>
+Acessem o <a href="https://viniciusaires.dev/minicurso-controle-de-versao-com-git-github" target="_blank">link</a> para ver a apresentação em tela cheia <i class="em em-smile"></i>

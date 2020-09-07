@@ -9,3 +9,4 @@ node_modules
 package.json
 .others
 .jekyll-metadata
+.jekyll-cache
