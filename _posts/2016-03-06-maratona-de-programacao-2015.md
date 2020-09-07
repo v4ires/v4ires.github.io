@@ -104,11 +104,13 @@ Experiência
 A experiência de participar da etapa nacional da Maratona de Programação é muito gratificante, pois proporciona aos participantes uma competição saudável que agrega novos conhecimentos, vivências e amizades. O evento proporcionou momentos de networking com as empresas patrocinadoras dentre elas a <a href="http://www.b2wdigital.com/" target="_blank">B2W</a> e o <a href="https://www.facebook.com" target="_blank">Facebook</a>. Durante esse momento com as empresas foi apresentado diversos assuntos interessantes como a utilização do <a href="https://en.wikipedia.org/wiki/Virtual_reality" target="_blank">Virtual Reality</a> (VR) e técnicas de inteligência artificial e aprendizagem de máquina aplicada a sistemas de e-commerce.
 Abaixo você pode conferir um pequeno vídeo com um breve resumo de como foi a Maratona de Programação e as nossas rápidas aventuras na cidade de São Paulo.
 
-<p class="myIframe" style="text-align: center">
-  <iframe width="640" height="360" src="https://www.youtube.com/embed/wXBDoX4PZj4" frameborder="0" allowfullscreen></iframe>
+<br>
+<p class="iframe-container" style="text-align: center">
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/wXBDoX4PZj4" frameborder="0" allowfullscreen></iframe>
 </p>
+<br>
 
 Referências
 ==================
 
-Maratona de Programação. IME-USP. Disponível em: <a href="http://maratona.ime.usp.br/" target="_blank">http://maratona.ime.usp.br/</a>. Acesso em: 06, mar. 2016.
+[1] Maratona de Programação. IME-USP. Disponível em: <a href="http://maratona.ime.usp.br/" target="_blank">http://maratona.ime.usp.br/</a>. Acesso em: 06, mar. 2016.

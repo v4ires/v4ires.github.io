@@ -8,7 +8,9 @@
                     <img src="{{ post.thumbnail }}">
                 </div>
                 <div class="collection" style="margin-bottom: 0px; margin-top: 0px;">
-                    <a href="{{ site.baseurl }}{{ post.url }}" class="collection-item">{{ post.title }}</a>
+                    <a href="{{ site.baseurl }}{{ post.url }}" class="collection-item" title="{{post.title}}" >
+                        {{ post.title | truncate: 50, "..." }}
+                    </a>
                 </div>
                 <div class="card-action">
                     <a class="waves-effect waves-light btn" href="{{ site.baseurl }}{{ post.url }}"
