@@ -64,3 +64,57 @@ compress_html:
   endings: [p, li, td]
   profile: true
   startings: [head, body]
+
+timelines:
+  - background_image: https://viniciusaires.dev/assets/images/timeline_unicamp.png
+    range_years: 2020 - Atual
+    description: Aluno Especial de Doutorado em Ciência da Computação pelo Instituto de Computação da Universidade Estadual de Campinas   - IC Unicamp.
+
+  - background_image: https://viniciusaires.dev/assets/images/timeline_eldorado.png
+    range_years: 2018 - Atual
+    description: Analista de Software em projetos baseados em Cloud da empresa Motorola.
+
+  - background_image: https://viniciusaires.dev/assets/images/timeline_usp.png
+    range_years: 2016 - 2019
+    description: Mestrado em Ciência da Computação e Matemática Computacional pela Instituto de Ciências de Computação e Matemática Computacional Universidade de São Paulo   - ICMC USP.
+
+  - background_image: https://viniciusaires.dev/assets/images/timeline_uft.png
+    range_years: 2015 - 2016
+    description: Estágio em Engenharia de Software no Laboratório de Informática do curso de Ciência da Computação   - UFT.
+
+  - background_image: https://viniciusaires.dev/assets/images/timeline_bb.png
+    range_years: 2014 - 2015
+    description: Estágio em Engenharia de Software na Superintendencia do Banco do Brasil do Estado do Tocantins   - Super TO.
+
+  - background_image: https://viniciusaires.dev/assets/images/timeline_uft.png
+    range_years: 2012 - 2016
+    description: Graduação em Ciência da Computação pela Universidade Federal do Tocantins (UFT).
+
+works: 
+  - background_image: https://viniciusaires.dev/assets/images/motorola_project.png
+    project_name: Moto Feedback
+    description: Aplicação de inteligência artificial e criação automática de issues no Jira baseadas em feedback de usuário finais.
+
+  - background_image: https://viniciusaires.dev/assets/images/motorola_project.png
+    project_name: Demo Mode
+    description: Aplicação Back-end para servir dados de campanha publicitária para aplicação de demonstração de novos aparelhos da Motorola.
+
+  - background_image: https://viniciusaires.dev/assets/images/iotdsm_logo.png
+    project_name: IoTDSM
+    description: Arquitetura de referência para criação de aplicações IoT interoperáveis.
+
+  - background_image: https://viniciusaires.dev/assets/images/uft_servicos.png
+    project_name: UFT Serviços
+    description: Aplicativo Android para abertura e acompanhamento de chamados da UFT.
+
+  - background_image: https://viniciusaires.dev/assets/images/maratonato.svg
+    project_name: ACM ICPC at TO
+    description: Site da Maratona de Programação no Tocantins.
+
+  - background_image: https://viniciusaires.dev/assets/images/dojoto.svg
+    project_name: DojoTO
+    description: Website do Coding Dojo TO.
+
+  - background_image: https://viniciusaires.dev/assets/images/superto.svg
+    project_name: Super TO
+    description: Website da Superintendencia do Banco do Brasil do estado do Tocantins.

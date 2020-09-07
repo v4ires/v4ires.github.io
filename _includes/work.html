@@ -1,138 +1,27 @@
 <div class="container">
     <h3 class="header text_b" style="text-align: justify; padding-bottom: 2rem;">Portfólio</h3>
     <div class="row">
+        {% for work in site.works %}
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
             <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="{{ site.baseurl }}/assets/images/motorola_project.png">
+                    <img class="activator" src="{{ work.background_image }}">
                 </div>
                 <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Moto Feedback<i
-                            class="material-icons right">more_vert</i></span>
+                    <span class="card-title activator grey-text text-darken-4">
+                        {{ work.project_name }}
+                        <i class="material-icons right">more_vert</i>
+                    </span>
                 </div>
                 <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Moto Feedback<i
-                            class="material-icons right">close</i></span>
-                    <p>Aplicação de inteligência artificial e criação automática de issues no Jira baseadas
-                        em feedback de usuário finais.</p>
+                    <span class="card-title grey-text text-darken-4">
+                        {{ work.project_name }}
+                        <i class="material-icons right">close</i>
+                    </span>
+                    <p>{{ work.description }}</p>
                 </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="{{ site.baseurl }}/assets/images/motorola_project.png">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Demo Mode<i
-                            class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Demo Mode<i
-                            class="material-icons right">close</i></span>
-                    <p>Aplicação Servidora de dados para aplicação de
-                        demonstração de aparelhos da Motorola.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="{{ site.baseurl }}/assets/images/iotdsm_logo.png">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">IoTDSM<i
-                            class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">IoTDSM<i
-                            class="material-icons right">close</i></span>
-                    <p>Arquitetura de referência para criação de aplicações IoT
-                        interoperáveis.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="{{ site.baseurl }}/assets/images/uft_servicos.png">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">UFT Serviços<i
-                            class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">UFT Serviços<i
-                            class="material-icons right">close</i></span>
-                    <p>Aplicativo Android para abertura e acompanhamento de
-                        chamados da UFT.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="{{ site.baseurl }}/assets/images/maratonato.svg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">ACM ICPC at TO<i
-                            class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">ACM ICPC at TO<i
-                            class="material-icons right">close</i></span>
-                    <p>Site da Maratona de Programação no Tocantins.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="{{ site.baseurl }}/assets/images/viiisecomp.svg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">VIII SECOMP UFT<i
-                            class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">VIII SECOMP UFT<i
-                            class="material-icons right">close</i></span>
-                    <p>Website da VIII Semana Acadêmica de Ciência da Computação da Fundação Universidade
-                        Federal do Tocantins (UFT).</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="{{ site.baseurl }}/assets/images/dojoto.svg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">DojoTO<i
-                            class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">DojoTO<i
-                            class="material-icons right">close</i></span>
-                    <p>Website do Coding Dojo TO.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="{{ site.baseurl }}/assets/images/superto.svg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Super TO<i
-                            class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">DojoTO<i
-                            class="material-icons right">close</i></span>
-                    <p>Website da Super TO.</p>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>

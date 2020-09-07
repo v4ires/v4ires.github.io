@@ -6,7 +6,7 @@
 
 Este projeto utiliza [Jekyll](http://jekyllrb.com/), que é um gerador de páginas estáticas em Ruby.
 
-<p align="center"><img src="assets/images/icons/jekyll.png"/></p>
+<p align="center"><img src="assets/images/jekyll_logo.jpg"/></p>
 
 <caption>Página inicial do Website</caption>
 

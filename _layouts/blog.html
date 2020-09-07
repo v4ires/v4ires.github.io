@@ -9,10 +9,6 @@ comments: true
 <head>
   <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
   {% include meta.html %} {% include stylesheet.html %}
-  <script type="text/javascript">
-    function newPopup(url) {popupWindow = window.open(url,'popUpWindow','height=300,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes');}
-    function getURL(url){new_url = url + window.location.href; newPopup(new_url);}
-  </script>
 </head>
 
 {% include navbar_clean.html %}
