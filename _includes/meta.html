@@ -8,29 +8,29 @@
 
 <!-- Place this data between the <head> tags of your website -->
 <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-<meta name="description" content="{% if page.description %}{{page.description}}{% else %}Meu nome é Vinícius Aires Barros, atualmente sou formado em Ciência da Computação pela Universidade Federal do Tocantins (UFT - Palmas).{% endif %}" />
+<meta name="description" content="{% if page.description %}{{page.description}}{% else %}{{ site.description }}.{% endif %}" />
 
 <!-- Schema.org markup for Google+ -->
 <meta itemprop="name" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}">
-<meta itemprop="description" content="{% if page.description %}{{page.description}}{% else %}Meu nome é Vinícius Aires Barros, atualmente sou formado em Ciência da Computação pela Universidade Federal do Tocantins (UFT - Palmas).{% endif %}">
-<meta itemprop="image" content="{% if page.img_post %}{{ page.img_post }}{% else %}https://viniciusaires.dev{{ site.baseurl }}/assets/images/logo-social.png{% endif %}">
+<meta itemprop="description" content="{% if page.description %}{{page.description}}{% else %}{{ site.description }}.{% endif %}">
+<meta itemprop="image" content="{% if page.img_post %}{{ site.baseurl }}{{ page.img_post }}{% else %}{{ site.baseurl }}/assets/images/logo-social.png{% endif %}">
 
 <!-- Twitter Card data -->
 <meta name="twitter:card" content="product">
 <meta name="twitter:site" content="@publisher_handle">
 <meta name="twitter:title" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}">
-<meta name="twitter:description" content="{% if page.description %}{{page.description}}{% else %}Meu nome é Vinícius Aires Barros, atualmente sou formado em Ciência da Computação pela Universidade Federal do Tocantins (UFT - Palmas).{% endif %}">
-<meta name="twitter:creator" content="@vinicius_a1r3s">
-<meta name="twitter:image" content="{{ site.baseurl }}/assets/images/logo-website.png">
+<meta name="twitter:description" content="{% if page.description %}{{page.description}}{% else %}{{ site.description }}.{% endif %}">
+<meta name="twitter:creator" content="@v4ires">
+<meta name="twitter:image" content="{% if page.img_post %}{{ site.baseurl }}{{ page.img_post }}{% else %}{{ site.baseurl }}/assets/images/logo-social.png{% endif %}">
 
 <!-- Open Graph data -->
 <meta property="og:title" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}" />
 <meta property="og:locale" content="pt_BR">
 <meta property="og:type" content="{% if page.type %}{{page.type}}{% else %}website{% endif %}" />
-<meta property="og:url" content="https://www.viniciusaires.dev/{{page.slug}}" />
-<meta property="og:image" content="{% if page.img_post %}{{ page.img_post }}{% else %}https://viniciusaires.dev{{ site.baseurl }}/assets/images/logo-social.png{% endif %}" />
-<meta property="og:image:type" content="image/jpeg">
+<meta property="og:url" content="{{ site.baseurl }}/{{page.slug}}" />
+<meta property="og:image" content="{% if page.img_post %}{{ site.baseurl }}{{ page.img_post }}{% else %}{{ site.baseurl }}/assets/images/logo-social.png{% endif %}" />
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:description" content="{% if page.description %}{{page.description}}{% else %}Meu nome é Vinícius Aires Barros, atualmente sou formado em Ciência da Computação pela Universidade Federal do Tocantins (UFT - Palmas).{% endif %}" />
+<meta property="og:description" content="{% if page.description %}{{page.description}}{% else %}{{ site.description }}.{% endif %}" />
 <meta property="og:site_name" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}" />
