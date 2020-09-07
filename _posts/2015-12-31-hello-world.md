@@ -7,9 +7,9 @@ background: /assets/images/hello-world.jpg
 thumbnail: /assets/images/hello-world_thumbnail.jpg
 img_post: /assets/images/hello-world-post.png
 slug: hello-world
-
 ---
-> Hello World
+
+Hello World
 ------
 
 Olá Mundo, aqui no meu blog você irá encontrar informações sobre meus projetos, tutoriais e artigos sobre desenvolvimento de uma forma prática e convidativa!

@@ -1,16 +1,13 @@
 <div class="navbar-fixed">
-  <nav id="nav_f" class="default_color" role="navigation" style="height: 65px;">
+  <nav id="nav_f" class="default_color" role="navigation" style="height: 65px; background-color: #009688">
     <div class="container">
       <div class="nav-wrapper">
-        <a href="/" class="brand-logo" style="padding-top: 5px;"><img
-            src="{{ site.baseurl }}{{ site.baseurl }}/assets/images/logo.svg" alt="" /></a>
+        <a href="/" class="brand-logo">
+          <img src="{{ site.baseurl }}{{ site.baseurl }}/assets/images/logo.svg" style="width: 100%;"/>
+        </a>
         <ul class="right hide-on-med-and-down">
           {% include li_navbar.html %}
         </ul>
-        <ul id="nav-mobile" class="side-nav">
-          {% include li_navbar.html %}
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
       </div>
     </div>
   </nav>

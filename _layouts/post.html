@@ -9,25 +9,7 @@ layout: blog
         <div class="card-image">
           <img src="{{ page.background }}">
         </div>
-        <div class="card-action" style="padding-left: 10px; padding-right: 10px;">
-          <a href="http://www.github.com/v4ires" target="_blank">
-            <div class="chip" style="padding-right: 10px; padding-left: 10px;">
-              <img src="https://avatars3.githubusercontent.com/u/4098132?v=3&s=60" alt="Contact Person">
-              <a href="http://www.github.com/v4ires" target="_blank" style="color: #727272;margin-right: 0px;margin-left: -15px;">@v4ires</a>
-            </div>
-          </a>
-          <div class="social-links" style="float: right;">
-            <a href="JavaScript:getURL('https://www.facebook.com/sharer/sharer.php?u=');" style="margin-right: 5px;">
-              <img src="{{ site.baseurl }}/assets/images/icons/facebook.png" alt="" />
-            </a>
-            <a href="JavaScript:getURL('https://twitter.com/home?status=');" style="margin-right: 5px;">
-              <img src="{{ site.baseurl }}/assets/images/icons/twitter.png" alt="" />
-            </a>
-            <a href="JavaScript:getURL('https://www.linkedin.com/shareArticle?mini=true&url=');" style="margin-right: 5px;">
-              <img src="{{ site.baseurl }}/assets/images/icons/linked-in.png" alt="" />
-            </a>
-          </div>
-        </div>
+        {% include blog_header.html %}
         <div class="card-content">
           {{ content }}
           <div class="date" style="float: right;">

@@ -1,0 +1,19 @@
+h1 {
+    font-family: 'Roboto';
+    font-size: 22px;    
+}
+
+h1, h2, h3, h4, h5, h6{margin-top: 0px;}
+
+span {
+    font-size: medium;
+}
+
+#card-content{
+    padding-top: 0px;
+}
+
+#about{background:rgb(247, 247, 247);}
+#resume{background:rgb(255, 255, 255);}
+#work{background:rgb(247, 247, 247);}
+#blog{background:rgb(255, 255, 255); padding-top: 2.5rem; padding-bottom:2.5rem}
