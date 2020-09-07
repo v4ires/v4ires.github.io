@@ -1,13 +1,10 @@
 .default_color{background-color:#009688 !important}
 .default_color_text{color:#009688 !important}
 .icon-block{padding:0 15px}
-#intro,
-#sobre,
-#resume,
-#skills,
-#work,
-#team,
-#blog{padding-top:2.5rem;padding-bottom:2.5rem;}
+#about{background:rgb(247, 247, 247);}
+#resume{background:rgb(255, 255, 255);}
+#work{background:rgb(247, 247, 247);}
+#blog{background:rgb(255, 255, 255); padding-top: 2.5rem; padding-bottom:2.5rem}
 #index-banner{min-height:632px;max-height:864px;position:relative;background-color:#009688;}
 #nav_f{box-shadow:none !important;-webkit-box-shadow:none !important}
 .text_h{padding:15% 0;font-weight:100;color:white}
@@ -19,9 +16,6 @@
 .promo i{color:#00796B;font-size:7rem;display:block}
 .card-content a{color:#00796B}
 .card-content a:hover{color:#00796B}
-#sobre,
-#intro,
-#blog{background:rgb(247, 247, 247)}
 .text_pink{color:#EF9A9A}
 nav ul a{font-size:1.2rem;color:#FFF;letter-spacing:2px;display:block;font-weight:300;padding:0px 15px}
 .cd-headline.type .cd-words-wrapper{vertical-align:top;overflow:hidden}
