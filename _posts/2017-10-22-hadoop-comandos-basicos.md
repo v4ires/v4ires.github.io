@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Comandos básicos do Apache Hadoop 2.8.x
+title: Comandos básicos do Apache Hadoop 2.8.x - (PT-BR)
 type: article
 description: Neste tutorial você aprenderá a aplicar alguns comandos básicos para o gerenciamento do Apache Hadoop
 background: /assets/images/hadoop-cmd-basicos.png
@@ -9,7 +9,8 @@ img_post: /assets/images/hadoop-cmd-basicos-post.png
 slug: hadoop-cmd-basicos
 ---
 
-## Comandos básicos do Apache Hadoop 2.8.x
+Comandos básicos do Apache Hadoop 2.8.x - (PT-BR)
+------
 
 #### Requisitos iniciais:
 

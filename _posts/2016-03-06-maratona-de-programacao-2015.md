@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Maratona de Programação 2015
+title: Maratona de Programação 2015 - (PT-BR)
 type: article
 description: Nos dias 13 e 14 de novembro de 2015 a equipe MyCoffeeSoft representou o estado do Tocantins na final brasileira da Maratona de Programação no IBTA em São Paulo (SP).
 background: /assets/images/maratona-programacao.jpg
@@ -9,7 +9,7 @@ img_post: /assets/images/maratona-programacao-post.png
 slug: maratona-de-programacao-2015
 ---
 
-Final Brasileira Maratona de Programação 2015
+Final Brasileira Maratona de Programação 2015 - (PT-BR)
 ------
 
 Em 2015 eu mais meus parceiros de equipe MyCoffeeSoft (Matheus Pedroza, Thaylon Guedes e Herinson Rodrigues) fomos classificados para a final brasileira da <a href="http://maratona.ime.usp.br/" target="_blank">Maratona de Programação 2015</a> em São Paulo (SP) para representar o Tocantins em nome da Universidade Federal do Tocantins (<a href="http://www.uft.edu.br" target="_blank">UFT</a>). A Maratona de Programação ocorreu durante os dias 13 e 14 de novembro de 2015 no Instituto Brasileiro de Tecnologia Avançada (<a href="http://ibta.edu.br/" target="_blank">IBTA</a>). A participação da equipe MyCoffeeSoft na final nacional foi marcante pois foi a segunda vez que uma equipe do Tocantins representou o estado na final nacional da Maratona de Programação ICPC.

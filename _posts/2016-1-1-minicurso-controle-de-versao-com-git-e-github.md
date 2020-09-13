@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Minicurso Controle de versão com Git e Github
+title: Minicurso Controle de versão com Git e Github - (PT-BR)
 type: article
 description: Nos dias 3, 4 e 5 de Novembro aconteceu a VIII SECOMP onde tive a oportunidade junto ao meu amigo @herodrigues de montar um minicurso com tema Controle de Versão com Git e Github.
 background: /assets/images/minicurso-git-github.jpg
@@ -9,7 +9,7 @@ img_post: /assets/images/minicurso-git-github-post.png
 slug: minicurso-controle-de-versao-com-git-e-github
 ---
 
-Minicurso Controle de versão com Git e Github
+Minicurso Controle de versão com Git e Github - (PT-BR)
 ------
 
 Nos dias 3, 4 e 5 de Novembro aconteceu a VIII Semana Acadêmica de Ciência da Computação na [UFT](http://www.uft.edu.br) onde tive a oportunidade junto ao meu amigo <b>Herinson Rodrigues</b> [@herodrigues](https://www.github.com.br/herodrigues) de montar um minicurso com tema “Controle de Versão com Git e Github”.

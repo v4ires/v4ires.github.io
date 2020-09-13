@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Configuração do Apache Hadoop em Multi Node
+title: Configuração do Apache Hadoop em Multi Node - (PT-BR)
 type: article
 description: Neste tutorial você aprenderá a configurar o Apache Hadoop em Single Node
 background: /assets/images/configurando-hadoop-multi-node.png
@@ -9,7 +9,8 @@ img_post: /assets/images/configurando-hadoop-multi-node-post.png
 slug: config-hadoop-multi-node
 ---
 
-## Instalação do Apache Hadoop 2.8.x em modo Multi Node
+Instalação do Apache Hadoop 2.8.x em modo Multi Node - (PT-BR)
+------
 
 Requisitos iniciais:
 

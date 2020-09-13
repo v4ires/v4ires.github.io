@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Configuração do Servidor JBoss Wildfly 10 (Production)
+title: Configuração do Servidor JBoss Wildfly 10 (Production) - (PT-BR)
 type: article
 description: Neste tutorial você aprenderá a configurar o Wildfly 10.x e colocar o servidor em produção.
 background: /assets/images/config-wildfly10.png
@@ -9,7 +9,8 @@ img_post: /assets/images/config-wildfly10-post.png
 slug: config-wildfly-prodution
 ---
 
-## Configuração do Servidor JBoss Wildfly 10 (Production)
+Configuração do Servidor JBoss Wildfly 10 (Production) - (PT-BR)
+------
 
 ### TL;DR
 

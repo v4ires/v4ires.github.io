@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mas afinal de contas o que é o Coding Dojo?
+title: Mas afinal de contas o que é o Coding Dojo? - (PT-BR)
 type: article
 description: A palavra DOJO, em uma tradução literal do japonês, significa lugar do caminho e é originalmente usada para designar um espaço de meditação dos monges budistas.
 background: /assets/images/coding-dojo-to.png
@@ -9,7 +9,7 @@ img_post: /assets/images/coding-dojo-to-post.png
 slug: mas-afinal-de-contas-o-que-e-o-coding-dojo
 ---
 
-Mas afinal de contas o que é o Coding Dojo?
+Mas afinal de contas o que é o Coding Dojo? - (PT-BR)
 ------
 
 A palavra DOJO, em uma tradução literal do japonês, significa "lugar do caminho" e é originalmente usada para designar um espaço de meditação dos monges budistas. Em uma tradução livre dojo significa "lugar onde se estuda a vida", mas hoje em dia o termo é mais conhecido como lugar onde se pratica artes marciais em uma sala dentro de uma academia com o chão coberto de tapetes.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Configuração do PostgreSQL (Production)
+title: Configuração do PostgreSQL (Production) - (PT-BR)
 type: article
 description: Neste tutorial você aprenderá a configurar o banco de dados PostgreSQL e colocar-lo em produção.
 background: /assets/images/config-postgresql-production.png
@@ -9,7 +9,8 @@ img_post: /assets/images/config-postgresql-production-post.png
 slug: config-postgresql-prodution
 ---
 
-## Configuração do Banco de Dados PostgreSQL (Production)
+Configuração do Banco de Dados PostgreSQL (Production) - (PT-BR)
+------
 
 ### TL;DR
 
