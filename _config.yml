@@ -90,15 +90,7 @@ timelines:
     range_years: 2012 - 2016
     description: Graduation in Computer Science from the Federal University of Tocantins (UFT).
 
-works: 
-  #- background_image: https://viniciusaires.dev/assets/images/motorola_project.png
-  #  project_name: Moto Feedback
-  #  description: Artificial intelligence application and automatic creation of issues in Jira based on customer`s feedback.
-
-  #- background_image: https://viniciusaires.dev/assets/images/motorola_project.png
-  #  project_name: Demo Mode
-  #  description: Cloud application to serve advertising campaign data for demonstration application of new Motorola devices.
-
+works:
   - background_image: https://viniciusaires.dev/assets/images/iotdsm_logo.png
     project_name: IoTDSM
     description: Reference architecture for creating interoperable IoT systems.
