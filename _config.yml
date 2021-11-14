@@ -66,9 +66,9 @@ compress_html:
   startings: [head, body]
 
 timelines:
-  - background_image: https://viniciusaires.dev/assets/images/timeline_unicamp.png
-    range_years: 2020 - Present
-    description: Guest Student in Computer Science at the Institute of Computing of the State University of Campinas - IC Unicamp.
+  - background_image: https://viniciusaires.dev/assets/images/timeline_ibm.png
+    range_years: 2021 - Present
+    description: Data Scientist at IBM CIO.
 
   - background_image: https://viniciusaires.dev/assets/images/timeline_eldorado.png
     range_years: 2018 - Present
