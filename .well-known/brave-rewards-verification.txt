@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: viniciusaires.dev
+Token: c93c4760dc7da117d6472b81c3365294c5322063d4512678c16e223e05e7c2d4
