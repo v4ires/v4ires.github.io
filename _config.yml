@@ -68,39 +68,39 @@ compress_html:
   startings: [head, body]
 
 timelines:
-  - background_image: https://viniciusaires.dev/assets/images/timeline_ibm.png
+  - background_image: ./assets/images/timeline_ibm.png
     range_years: 2021 - Present
     description: Data Scientist at IBM CIO.
 
-  - background_image: https://viniciusaires.dev/assets/images/timeline_eldorado.png
+  - background_image: ./assets/images/timeline_eldorado.png
     range_years: 2018 - Present
     description: Software Analyst in Cloud-based projects.
 
-  - background_image: https://viniciusaires.dev/assets/images/timeline_usp.png
+  - background_image: ./assets/images/timeline_usp.png
     range_years: 2016 - 2019
     description: Master in Computer Science and Computational Mathematics from University of São Paulo - USP.
 
-  - background_image: https://viniciusaires.dev/assets/images/timeline_uft.png
+  - background_image: ./assets/images/timeline_uft.png
     range_years: 2015 - 2016
     description: Software Engineering Internship at the Computer Laboratory of the Computer Science Graduation - UFT.
 
-  - background_image: https://viniciusaires.dev/assets/images/timeline_bb.png
+  - background_image: ./assets/images/timeline_bb.png
     range_years: 2014 - 2015
     description: Software Engineering Internship at the Superintendency of Banco do Brasil of the State of Tocantins - Super TO.
 
-  - background_image: https://viniciusaires.dev/assets/images/timeline_uft.png
+  - background_image: ./assets/images/timeline_uft.png
     range_years: 2012 - 2016
     description: Graduation in Computer Science from the Federal University of Tocantins (UFT).
 
 works:
-  - background_image: https://viniciusaires.dev/assets/images/iotdsm_logo.png
+  - background_image: ./assets/images/iotdsm_logo.png
     project_name: IoTDSM
     description: Reference architecture for creating interoperable IoT systems.
 
-  - background_image: https://viniciusaires.dev/assets/images/uft_servicos.png
+  - background_image: ./assets/images/uft_servicos.png
     project_name: UFT Serviços
     description: Android application for opening and tracking UFT service orders.
 
-  - background_image: https://viniciusaires.dev/assets/images/superto.svg
+  - background_image: ./assets/images/superto.svg
     project_name: Super TO
     description: Banco do Brasil Superintendence Website at Tocantins.
