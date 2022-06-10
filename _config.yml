@@ -73,7 +73,7 @@ timelines:
     description: Data Scientist at IBM CIO.
 
   - background_image: ./assets/images/timeline_eldorado.png
-    range_years: 2018 - Present
+    range_years: 2018 - 2021
     description: Software Analyst in Cloud-based projects.
 
   - background_image: ./assets/images/timeline_usp.png
