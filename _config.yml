@@ -6,7 +6,7 @@
 name: Vinícius Aires Barros
 
 # Short bio or description (displayed in the header)
-description: Computer Scientist passionate about technology
+description: Data Scientist passionate about technology
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
@@ -14,7 +14,7 @@ disqus: viniciusaires
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: https://viniciusaires.dev
+url: https://v4ires.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
