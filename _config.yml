@@ -68,8 +68,12 @@ compress_html:
   startings: [head, body]
 
 timelines:
+  - background_image: https://fakeimg.pl/2844x1422
+    range_years: 2023 - current
+    description: Data Scientist Consultant.
+
   - background_image: ./assets/images/timeline_ibm.png
-    range_years: 2021 - Present
+    range_years: 2021 - 2023
     description: Data Scientist at IBM CIO.
 
   - background_image: ./assets/images/timeline_eldorado.png
